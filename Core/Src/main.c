@@ -78,7 +78,7 @@ const osThreadAttr_t ATParsingTask_attributes = {
   .cb_size = sizeof(ATParsingTaskControlBlock),
   .stack_mem = &ATParsingTaskBuffer[0],
   .stack_size = sizeof(ATParsingTaskBuffer),
-  .priority = (osPriority_t) osPriorityAboveNormal7,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for ATHandlingTask */
 osThreadId_t ATHandlingTaskHandle;
@@ -90,7 +90,7 @@ const osThreadAttr_t ATHandlingTask_attributes = {
   .cb_size = sizeof(ATHandlingTaskControlBlock),
   .stack_mem = &ATHandlingTaskBuffer[0],
   .stack_size = sizeof(ATHandlingTaskBuffer),
-  .priority = (osPriority_t) osPriorityAboveNormal6,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for UARTProcTask */
 osThreadId_t UARTProcTaskHandle;
@@ -114,7 +114,7 @@ const osThreadAttr_t ModemMngrTask_attributes = {
   .cb_size = sizeof(ModemMngrTaskControlBlock),
   .stack_mem = &ModemMngrTaskBuffer[0],
   .stack_size = sizeof(ModemMngrTaskBuffer),
-  .priority = (osPriority_t) osPriorityNormal7,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for AppSendTask */
 osThreadId_t AppSendTaskHandle;
@@ -126,7 +126,7 @@ const osThreadAttr_t AppSendTask_attributes = {
   .cb_size = sizeof(SendTemperatureControlBlock),
   .stack_mem = &SendTemperatureBuffer[0],
   .stack_size = sizeof(SendTemperatureBuffer),
-  .priority = (osPriority_t) osPriorityLow7,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for setPWMDutyTask */
 osThreadId_t setPWMDutyTaskHandle;
@@ -138,7 +138,7 @@ const osThreadAttr_t setPWMDutyTask_attributes = {
   .cb_size = sizeof(setPWMDutyTaskControlBlock),
   .stack_mem = &setPWMDutyTaskBuffer[0],
   .stack_size = sizeof(setPWMDutyTaskBuffer),
-  .priority = (osPriority_t) osPriorityLow7,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for SoilSensorTask */
 osThreadId_t SoilSensorTaskHandle;
@@ -150,7 +150,7 @@ const osThreadAttr_t SoilSensorTask_attributes = {
   .cb_size = sizeof(SoilSensorTaskControlBlock),
   .stack_mem = &SoilSensorTaskBuffer[0],
   .stack_size = sizeof(SoilSensorTaskBuffer),
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow1,
 };
 /* Definitions for uartQueue */
 osMessageQueueId_t uartQueueHandle;
@@ -313,7 +313,34 @@ const volatile int uxTopUsedPriority = configMAX_PRIORITIES - 1; //this declarat
   */
 int main(void)
 {
+  void HardFault_Handler(void)
+{
+    __asm volatile (
+        "tst lr, #4 \n"
+        "ite eq \n"
+        "mrseq r0, msp \n"
+        "mrsne r0, psp \n"
+        "b hard_fault_handler_c \n"
+    );
+}
 
+void hard_fault_handler_c(uint32_t *hardfault_args)
+{
+    volatile uint32_t stacked_r0  = hardfault_args[0];
+    volatile uint32_t stacked_r1  = hardfault_args[1];
+    volatile uint32_t stacked_r2  = hardfault_args[2];
+    volatile uint32_t stacked_r3  = hardfault_args[3];
+    volatile uint32_t stacked_r12 = hardfault_args[4];
+    volatile uint32_t stacked_lr  = hardfault_args[5];
+    volatile uint32_t stacked_pc  = hardfault_args[6];
+    volatile uint32_t stacked_psr = hardfault_args[7];
+
+    (void)stacked_r0; (void)stacked_r1; (void)stacked_r2; (void)stacked_r3;
+    (void)stacked_r12; (void)stacked_lr; (void)stacked_psr;
+
+    // Coloque um breakpoint aqui e inspecione stacked_pc
+    while (1) { }
+}
   /* USER CODE BEGIN 1 */
   uint32_t i;  
   (void)uxTopUsedPriority; //this declaration enables thread awareness for FreeRTOS using OpenOCD
@@ -461,12 +488,7 @@ int main(void)
   {
     for (i = 0; i < 8; i++)
     {
-      HAL_GPIO_WritePin(KIT_LED_GPIO_Port, KIT_LED_Pin, 0);
-      HAL_Delay(25);
-      HAL_GPIO_WritePin(KIT_LED_GPIO_Port, KIT_LED_Pin, 1);
-      HAL_Delay(50);
     }
-    HAL_Delay(800);
 
     /* USER CODE END WHILE */
 

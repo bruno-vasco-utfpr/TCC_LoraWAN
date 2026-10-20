@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
+ARM GAS  /tmp/ccJ8m96Z.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.HAL_PWREx_EnableBkUpReg,"ax",%progbits
-  20              		.align	1
-  21              		.global	HAL_PWREx_EnableBkUpReg
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	HAL_PWREx_EnableBkUpReg:
-  27              	.LFB220:
-  28              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+  19              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+  20              		.section	.text.HAL_PWREx_EnableBkUpReg,"ax",%progbits
+  21              		.align	1
+  22              		.global	HAL_PWREx_EnableBkUpReg
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	HAL_PWREx_EnableBkUpReg:
+  28              	.LFB220:
    1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /**
    2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   ******************************************************************************
    3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @file    stm32f4xx_hal_pwr_ex.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** 
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /** @defgroup PWREx PWREx
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief PWR HAL module driver
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 2
+ARM GAS  /tmp/ccJ8m96Z.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           level 0 is requested. 
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       -@- Refer to the description of Read protection (RDP) in the Flash 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           programming manual.
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 3
+ARM GAS  /tmp/ccJ8m96Z.s 			page 3
 
 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
   29              		.loc 1 142 1
   30              		.cfi_startproc
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 4
+ARM GAS  /tmp/ccJ8m96Z.s 			page 4
 
 
   31              		@ args = 0, pretend = 0, frame = 8
@@ -222,10 +222,10 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
   58              		.loc 1 153 9
   59 0018 FFF7FEFF 		bl	HAL_GetTick
   60 001c 0246     		mov	r2, r0
-  61              		.loc 1 153 23
+  61              		.loc 1 153 23 discriminator 1
   62 001e 7B68     		ldr	r3, [r7, #4]
   63 0020 D31A     		subs	r3, r2, r3
-  64              		.loc 1 153 7
+  64              		.loc 1 153 7 discriminator 1
   65 0022 B3F57A7F 		cmp	r3, #1000
   66 0026 01D9     		bls	.L2
  154:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
   71              		.loc 1 151 9
   72 002c 064B     		ldr	r3, .L5+4
   73 002e 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 5
+ARM GAS  /tmp/ccJ8m96Z.s 			page 5
 
 
   74 0030 03F00803 		and	r3, r3, #8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  118              	.LCFI6:
  119              		.cfi_def_cfa_offset 16
  120 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 6
+ARM GAS  /tmp/ccJ8m96Z.s 			page 6
 
 
  121              	.LCFI7:
@@ -331,10 +331,10 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  137              		.loc 1 177 9
  138 0018 FFF7FEFF 		bl	HAL_GetTick
  139 001c 0246     		mov	r2, r0
- 140              		.loc 1 177 23
+ 140              		.loc 1 177 23 discriminator 1
  141 001e 7B68     		ldr	r3, [r7, #4]
  142 0020 D31A     		subs	r3, r2, r3
- 143              		.loc 1 177 7
+ 143              		.loc 1 177 7 discriminator 1
  144 0022 B3F57A7F 		cmp	r3, #1000
  145 0026 01D9     		bls	.L8
  178:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****     {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  157              		.loc 1 182 10
  158 0038 0023     		movs	r3, #0
  159              	.L9:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 7
+ARM GAS  /tmp/ccJ8m96Z.s 			page 7
 
 
  183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  206 000c BD46     		mov	sp, r7
  207              	.LCFI12:
  208              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 8
+ARM GAS  /tmp/ccJ8m96Z.s 			page 8
 
 
  209              		@ sp needed
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  256              		.cfi_restore 7
  257              		.cfi_def_cfa_offset 0
  258 0012 7047     		bx	lr
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 9
+ARM GAS  /tmp/ccJ8m96Z.s 			page 9
 
 
  259              	.L18:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  302 0014 7047     		bx	lr
  303              	.L22:
  304 0016 00BF     		.align	2
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 10
+ARM GAS  /tmp/ccJ8m96Z.s 			page 10
 
 
  305              	.L21:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** #elif defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) 
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       defined(STM32F401xC) || defined(STM32F401xE) || defined(STM32F410Tx) || defined(STM32F410Cx) 
  259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       defined(STM32F410Rx) || defined(STM32F411xE) || defined(STM32F446xx) || defined(STM32F469xx) 
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 11
+ARM GAS  /tmp/ccJ8m96Z.s 			page 11
 
 
  260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       defined(STM32F479xx) || defined(STM32F412Zx) || defined(STM32F412Vx) || defined(STM32F412Rx) 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  294:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   /* Enable PWR RCC Clock Peripheral */
  295:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   __HAL_RCC_PWR_CLK_ENABLE();
  339              		.loc 1 295 3
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 12
+ARM GAS  /tmp/ccJ8m96Z.s 			page 12
 
 
  340 000c 0023     		movs	r3, #0
@@ -707,10 +707,10 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  370              		.loc 1 308 11
  371 0042 FFF7FEFF 		bl	HAL_GetTick
  372 0046 0246     		mov	r2, r0
- 373              		.loc 1 308 25
+ 373              		.loc 1 308 25 discriminator 1
  374 0048 7B69     		ldr	r3, [r7, #20]
  375 004a D31A     		subs	r3, r2, r3
- 376              		.loc 1 308 9
+ 376              		.loc 1 308 9 discriminator 1
  377 004c 022B     		cmp	r3, #2
  378 004e 01D9     		bls	.L25
  309:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  379              		.loc 1 310 16
  380 0050 0323     		movs	r3, #3
  381 0052 44E0     		b	.L26
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 13
+ARM GAS  /tmp/ccJ8m96Z.s 			page 13
 
 
  382              	.L25:
@@ -776,13 +776,13 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  417              		.loc 1 325 11
  418 008e FFF7FEFF 		bl	HAL_GetTick
  419 0092 0246     		mov	r2, r0
- 420              		.loc 1 325 25
+ 420              		.loc 1 325 25 discriminator 1
  421 0094 7B69     		ldr	r3, [r7, #20]
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 14
+ARM GAS  /tmp/ccJ8m96Z.s 			page 14
 
 
  422 0096 D31A     		subs	r3, r2, r3
- 423              		.loc 1 325 9
+ 423              		.loc 1 325 9 discriminator 1
  424 0098 022B     		cmp	r3, #2
  425 009a 01D9     		bls	.L28
  326:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       {
@@ -817,10 +817,10 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  443              		.loc 1 335 11
  444 00b4 FFF7FEFF 		bl	HAL_GetTick
  445 00b8 0246     		mov	r2, r0
- 446              		.loc 1 335 25
+ 446              		.loc 1 335 25 discriminator 1
  447 00ba 7B69     		ldr	r3, [r7, #20]
  448 00bc D31A     		subs	r3, r2, r3
- 449              		.loc 1 335 9
+ 449              		.loc 1 335 9 discriminator 1
  450 00be B3F57A7F 		cmp	r3, #1000
  451 00c2 01D9     		bls	.L30
  336:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  460              		.loc 1 333 48
  461 00d0 B3F5804F 		cmp	r3, #16384
  462 00d4 EED1     		bne	.L31
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 15
+ARM GAS  /tmp/ccJ8m96Z.s 			page 15
 
 
  463 00d6 01E0     		b	.L33
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  357:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @retval None
  358:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   */
  359:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** void HAL_PWREx_EnableMainRegulatorLowVoltage(void)
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 16
+ARM GAS  /tmp/ccJ8m96Z.s 			page 16
 
 
  360:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  544              		.loc 1 371 1
  545              		.cfi_startproc
  546              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 17
+ARM GAS  /tmp/ccJ8m96Z.s 			page 17
 
 
  547              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  592              		@ link register save eliminated.
  593 0000 80B4     		push	{r7}
  594              	.LCFI35:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 18
+ARM GAS  /tmp/ccJ8m96Z.s 			page 18
 
 
  595              		.cfi_def_cfa_offset 4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  640              		.cfi_offset 7, -4
  641 0002 00AF     		add	r7, sp, #0
  642              	.LCFI40:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 19
+ARM GAS  /tmp/ccJ8m96Z.s 			page 19
 
 
  643              		.cfi_def_cfa_register 7
@@ -1108,47 +1108,46 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 1
  665              	.LFE229:
  667              		.text
  668              	.Letext0:
- 669              		.file 2 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 670              		.file 3 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 671              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 672              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 673              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 674              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s 			page 20
+ 669              		.file 2 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h"
+ 670              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 671              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 672              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 673              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /tmp/ccJ8m96Z.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_pwr_ex.c
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:20     .text.HAL_PWREx_EnableBkUpReg:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:26     .text.HAL_PWREx_EnableBkUpReg:00000000 HAL_PWREx_EnableBkUpReg
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:94     .text.HAL_PWREx_EnableBkUpReg:00000044 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:100    .text.HAL_PWREx_DisableBkUpReg:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:106    .text.HAL_PWREx_DisableBkUpReg:00000000 HAL_PWREx_DisableBkUpReg
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:173    .text.HAL_PWREx_DisableBkUpReg:00000044 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:179    .text.HAL_PWREx_EnableFlashPowerDown:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:185    .text.HAL_PWREx_EnableFlashPowerDown:00000000 HAL_PWREx_EnableFlashPowerDown
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:218    .text.HAL_PWREx_EnableFlashPowerDown:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:223    .text.HAL_PWREx_DisableFlashPowerDown:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:229    .text.HAL_PWREx_DisableFlashPowerDown:00000000 HAL_PWREx_DisableFlashPowerDown
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:262    .text.HAL_PWREx_DisableFlashPowerDown:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:267    .text.HAL_PWREx_GetVoltageRange:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:273    .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:306    .text.HAL_PWREx_GetVoltageRange:00000018 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:311    .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:317    .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:485    .text.HAL_PWREx_ControlVoltageScaling:000000e8 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:492    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:498    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000000 HAL_PWREx_EnableMainRegulatorLowVoltage
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:531    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:536    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:542    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000000 HAL_PWREx_DisableMainRegulatorLowVoltage
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:575    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:580    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:586    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000000 HAL_PWREx_EnableLowRegulatorLowVoltage
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:619    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:624    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:630    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000000 HAL_PWREx_DisableLowRegulatorLowVoltage
-C:\Users\bruno\AppData\Local\Temp\ccieV9Vf.s:663    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000014 $d
+     /tmp/ccJ8m96Z.s:21     .text.HAL_PWREx_EnableBkUpReg:00000000 $t
+     /tmp/ccJ8m96Z.s:27     .text.HAL_PWREx_EnableBkUpReg:00000000 HAL_PWREx_EnableBkUpReg
+     /tmp/ccJ8m96Z.s:94     .text.HAL_PWREx_EnableBkUpReg:00000044 $d
+     /tmp/ccJ8m96Z.s:100    .text.HAL_PWREx_DisableBkUpReg:00000000 $t
+     /tmp/ccJ8m96Z.s:106    .text.HAL_PWREx_DisableBkUpReg:00000000 HAL_PWREx_DisableBkUpReg
+     /tmp/ccJ8m96Z.s:173    .text.HAL_PWREx_DisableBkUpReg:00000044 $d
+     /tmp/ccJ8m96Z.s:179    .text.HAL_PWREx_EnableFlashPowerDown:00000000 $t
+     /tmp/ccJ8m96Z.s:185    .text.HAL_PWREx_EnableFlashPowerDown:00000000 HAL_PWREx_EnableFlashPowerDown
+     /tmp/ccJ8m96Z.s:218    .text.HAL_PWREx_EnableFlashPowerDown:00000014 $d
+     /tmp/ccJ8m96Z.s:223    .text.HAL_PWREx_DisableFlashPowerDown:00000000 $t
+     /tmp/ccJ8m96Z.s:229    .text.HAL_PWREx_DisableFlashPowerDown:00000000 HAL_PWREx_DisableFlashPowerDown
+     /tmp/ccJ8m96Z.s:262    .text.HAL_PWREx_DisableFlashPowerDown:00000014 $d
+     /tmp/ccJ8m96Z.s:267    .text.HAL_PWREx_GetVoltageRange:00000000 $t
+     /tmp/ccJ8m96Z.s:273    .text.HAL_PWREx_GetVoltageRange:00000000 HAL_PWREx_GetVoltageRange
+     /tmp/ccJ8m96Z.s:306    .text.HAL_PWREx_GetVoltageRange:00000018 $d
+     /tmp/ccJ8m96Z.s:311    .text.HAL_PWREx_ControlVoltageScaling:00000000 $t
+     /tmp/ccJ8m96Z.s:317    .text.HAL_PWREx_ControlVoltageScaling:00000000 HAL_PWREx_ControlVoltageScaling
+     /tmp/ccJ8m96Z.s:485    .text.HAL_PWREx_ControlVoltageScaling:000000e8 $d
+     /tmp/ccJ8m96Z.s:492    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000000 $t
+     /tmp/ccJ8m96Z.s:498    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000000 HAL_PWREx_EnableMainRegulatorLowVoltage
+     /tmp/ccJ8m96Z.s:531    .text.HAL_PWREx_EnableMainRegulatorLowVoltage:00000014 $d
+     /tmp/ccJ8m96Z.s:536    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000000 $t
+     /tmp/ccJ8m96Z.s:542    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000000 HAL_PWREx_DisableMainRegulatorLowVoltage
+     /tmp/ccJ8m96Z.s:575    .text.HAL_PWREx_DisableMainRegulatorLowVoltage:00000014 $d
+     /tmp/ccJ8m96Z.s:580    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000000 $t
+     /tmp/ccJ8m96Z.s:586    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000000 HAL_PWREx_EnableLowRegulatorLowVoltage
+     /tmp/ccJ8m96Z.s:619    .text.HAL_PWREx_EnableLowRegulatorLowVoltage:00000014 $d
+     /tmp/ccJ8m96Z.s:624    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000000 $t
+     /tmp/ccJ8m96Z.s:630    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000000 HAL_PWREx_DisableLowRegulatorLowVoltage
+     /tmp/ccJ8m96Z.s:663    .text.HAL_PWREx_DisableLowRegulatorLowVoltage:00000014 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

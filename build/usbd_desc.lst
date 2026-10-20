@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
+ARM GAS  /tmp/ccvEnTiG.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,62 +19,62 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.global	FS_Desc
-  20              		.section	.data.FS_Desc,"aw"
-  21              		.align	2
-  24              	FS_Desc:
-  25 0000 00000000 		.word	USBD_FS_DeviceDescriptor
-  26 0004 00000000 		.word	USBD_FS_LangIDStrDescriptor
-  27 0008 00000000 		.word	USBD_FS_ManufacturerStrDescriptor
-  28 000c 00000000 		.word	USBD_FS_ProductStrDescriptor
-  29 0010 00000000 		.word	USBD_FS_SerialStrDescriptor
-  30 0014 00000000 		.word	USBD_FS_ConfigStrDescriptor
-  31 0018 00000000 		.word	USBD_FS_InterfaceStrDescriptor
-  32              		.global	USBD_FS_DeviceDesc
-  33              		.section	.data.USBD_FS_DeviceDesc,"aw"
-  34              		.align	2
-  37              	USBD_FS_DeviceDesc:
-  38 0000 12010002 		.ascii	"\022\001\000\002\002\002\000@\203\004@W\000\002\001"
-  38      02020040 
-  38      83044057 
-  38      000201
-  39 000f 020301   		.ascii	"\002\003\001"
-  40              		.global	USBD_LangIDDesc
-  41              		.section	.data.USBD_LangIDDesc,"aw"
-  42              		.align	2
-  45              	USBD_LangIDDesc:
-  46 0000 04030904 		.ascii	"\004\003\011\004"
-  47              		.global	USBD_StrDesc
-  48              		.section	.bss.USBD_StrDesc,"aw",%nobits
-  49              		.align	2
-  52              	USBD_StrDesc:
-  53 0000 00000000 		.space	512
-  53      00000000 
-  53      00000000 
-  53      00000000 
-  53      00000000 
-  54              		.global	USBD_StringSerial
-  55              		.section	.data.USBD_StringSerial,"aw"
-  56              		.align	2
-  59              	USBD_StringSerial:
-  60 0000 1A0300   		.ascii	"\032\003\000"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 2
+  19              		.file 1 "USB_DEVICE/App/usbd_desc.c"
+  20              		.global	FS_Desc
+  21              		.section	.data.FS_Desc,"aw"
+  22              		.align	2
+  25              	FS_Desc:
+  26 0000 00000000 		.word	USBD_FS_DeviceDescriptor
+  27 0004 00000000 		.word	USBD_FS_LangIDStrDescriptor
+  28 0008 00000000 		.word	USBD_FS_ManufacturerStrDescriptor
+  29 000c 00000000 		.word	USBD_FS_ProductStrDescriptor
+  30 0010 00000000 		.word	USBD_FS_SerialStrDescriptor
+  31 0014 00000000 		.word	USBD_FS_ConfigStrDescriptor
+  32 0018 00000000 		.word	USBD_FS_InterfaceStrDescriptor
+  33              		.global	USBD_FS_DeviceDesc
+  34              		.section	.data.USBD_FS_DeviceDesc,"aw"
+  35              		.align	2
+  38              	USBD_FS_DeviceDesc:
+  39 0000 12010002 		.ascii	"\022\001\000\002\002\002\000@\203\004@W\000\002\001"
+  39      02020040 
+  39      83044057 
+  39      000201
+  40 000f 020301   		.ascii	"\002\003\001"
+  41              		.global	USBD_LangIDDesc
+  42              		.section	.data.USBD_LangIDDesc,"aw"
+  43              		.align	2
+  46              	USBD_LangIDDesc:
+  47 0000 04030904 		.ascii	"\004\003\011\004"
+  48              		.global	USBD_StrDesc
+  49              		.section	.bss.USBD_StrDesc,"aw",%nobits
+  50              		.align	2
+  53              	USBD_StrDesc:
+  54 0000 00000000 		.space	512
+  54      00000000 
+  54      00000000 
+  54      00000000 
+  54      00000000 
+  55              		.global	USBD_StringSerial
+  56              		.section	.data.USBD_StringSerial,"aw"
+  57              		.align	2
+  60              	USBD_StringSerial:
+ARM GAS  /tmp/ccvEnTiG.s 			page 2
 
 
-  61 0003 00000000 		.space	23
-  61      00000000 
-  61      00000000 
-  61      00000000 
-  61      00000000 
-  62              		.section	.text.USBD_FS_DeviceDescriptor,"ax",%progbits
-  63              		.align	1
-  64              		.global	USBD_FS_DeviceDescriptor
-  65              		.syntax unified
-  66              		.thumb
-  67              		.thumb_func
-  69              	USBD_FS_DeviceDescriptor:
-  70              	.LFB224:
-  71              		.file 1 "USB_DEVICE/App/usbd_desc.c"
+  61 0000 1A0300   		.ascii	"\032\003\000"
+  62 0003 00000000 		.space	23
+  62      00000000 
+  62      00000000 
+  62      00000000 
+  62      00000000 
+  63              		.section	.text.USBD_FS_DeviceDescriptor,"ax",%progbits
+  64              		.align	1
+  65              		.global	USBD_FS_DeviceDescriptor
+  66              		.syntax unified
+  67              		.thumb
+  68              		.thumb_func
+  70              	USBD_FS_DeviceDescriptor:
+  71              	.LFB224:
    1:USB_DEVICE/App/usbd_desc.c **** /* USER CODE BEGIN Header */
    2:USB_DEVICE/App/usbd_desc.c **** /**
    3:USB_DEVICE/App/usbd_desc.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
   41:USB_DEVICE/App/usbd_desc.c ****   */
   42:USB_DEVICE/App/usbd_desc.c **** 
   43:USB_DEVICE/App/usbd_desc.c **** /** @addtogroup USBD_DESC
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 3
+ARM GAS  /tmp/ccvEnTiG.s 			page 3
 
 
   44:USB_DEVICE/App/usbd_desc.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
   98:USB_DEVICE/App/usbd_desc.c ****   */
   99:USB_DEVICE/App/usbd_desc.c **** 
  100:USB_DEVICE/App/usbd_desc.c **** /** @defgroup USBD_DESC_Private_FunctionPrototypes USBD_DESC_Private_FunctionPrototypes
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 4
+ARM GAS  /tmp/ccvEnTiG.s 			page 4
 
 
  101:USB_DEVICE/App/usbd_desc.c ****   * @brief Private functions declaration.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  155:USB_DEVICE/App/usbd_desc.c **** __ALIGN_BEGIN uint8_t USBD_FS_DeviceDesc[USB_LEN_DEV_DESC] __ALIGN_END =
  156:USB_DEVICE/App/usbd_desc.c **** {
  157:USB_DEVICE/App/usbd_desc.c ****   0x12,                       /*bLength */
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 5
+ARM GAS  /tmp/ccvEnTiG.s 			page 5
 
 
  158:USB_DEVICE/App/usbd_desc.c ****   USB_DESC_TYPE_DEVICE,       /*bDescriptorType*/
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  212:USB_DEVICE/App/usbd_desc.c ****   * @brief Private variables.
  213:USB_DEVICE/App/usbd_desc.c ****   * @{
  214:USB_DEVICE/App/usbd_desc.c ****   */
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 6
+ARM GAS  /tmp/ccvEnTiG.s 			page 6
 
 
  215:USB_DEVICE/App/usbd_desc.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
   81 0002 83B0     		sub	sp, sp, #12
   82              	.LCFI1:
   83              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 7
+ARM GAS  /tmp/ccvEnTiG.s 			page 7
 
 
   84 0004 00AF     		add	r7, sp, #0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  127              		.cfi_startproc
  128              		@ args = 0, pretend = 0, frame = 8
  129              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 8
+ARM GAS  /tmp/ccvEnTiG.s 			page 8
 
 
  130              		@ link register save eliminated.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  177              		.global	USBD_FS_ProductStrDescriptor
  178              		.syntax unified
  179              		.thumb
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 9
+ARM GAS  /tmp/ccvEnTiG.s 			page 9
 
 
  180              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  293:USB_DEVICE/App/usbd_desc.c ****   }
  294:USB_DEVICE/App/usbd_desc.c ****   return USBD_StrDesc;
  219              		.loc 1 294 10
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 10
+ARM GAS  /tmp/ccvEnTiG.s 			page 10
 
 
  220 0028 024B     		ldr	r3, .L13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  262              	.LCFI18:
  263              		.cfi_def_cfa_offset 16
  264 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 11
+ARM GAS  /tmp/ccvEnTiG.s 			page 11
 
 
  265              	.LCFI19:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  308 0000 80B5     		push	{r7, lr}
  309              	.LCFI22:
  310              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 12
+ARM GAS  /tmp/ccvEnTiG.s 			page 12
 
 
  311              		.cfi_offset 7, -8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  353              		.global	USBD_FS_ConfigStrDescriptor
  354              		.syntax unified
  355              		.thumb
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 13
+ARM GAS  /tmp/ccvEnTiG.s 			page 13
 
 
  356              		.thumb_func
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  345:USB_DEVICE/App/usbd_desc.c ****   }
  346:USB_DEVICE/App/usbd_desc.c ****   return USBD_StrDesc;
  395              		.loc 1 346 10
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 14
+ARM GAS  /tmp/ccvEnTiG.s 			page 14
 
 
  396 0028 024B     		ldr	r3, .L27
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  439              		.cfi_def_cfa_offset 16
  440 0004 00AF     		add	r7, sp, #0
  441              	.LCFI34:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 15
+ARM GAS  /tmp/ccvEnTiG.s 			page 15
 
 
  442              		.cfi_def_cfa_register 7
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  487              		.thumb_func
  489              	Get_SerialNum:
  490              	.LFB231:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 16
+ARM GAS  /tmp/ccvEnTiG.s 			page 16
 
 
  367:USB_DEVICE/App/usbd_desc.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  396:USB_DEVICE/App/usbd_desc.c ****   deviceserial2 = *(uint32_t *) DEVICE_ID3;
  516              		.loc 1 396 19
  517 0012 0E4B     		ldr	r3, .L38+8
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 17
+ARM GAS  /tmp/ccvEnTiG.s 			page 17
 
 
  518              		.loc 1 396 17
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  564              		.syntax unified
  565              		.thumb
  566              		.thumb_func
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 18
+ARM GAS  /tmp/ccvEnTiG.s 			page 18
 
 
  568              	IntToUnicode:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  605 0020 FB68     		ldr	r3, [r7, #12]
  606 0022 1B0F     		lsrs	r3, r3, #28
  607              		.loc 1 422 37
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 19
+ARM GAS  /tmp/ccvEnTiG.s 			page 19
 
 
  608 0024 DAB2     		uxtb	r2, r3
@@ -1121,24 +1121,24 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  427:USB_DEVICE/App/usbd_desc.c ****     }
  428:USB_DEVICE/App/usbd_desc.c **** 
  429:USB_DEVICE/App/usbd_desc.c ****     value = value << 4;
- 641              		.loc 1 429 11 discriminator 2
+ 641              		.loc 1 429 11
  642 004e FB68     		ldr	r3, [r7, #12]
  643 0050 1B01     		lsls	r3, r3, #4
  644 0052 FB60     		str	r3, [r7, #12]
  430:USB_DEVICE/App/usbd_desc.c **** 
  431:USB_DEVICE/App/usbd_desc.c ****     pbuf[2 * idx + 1] = 0;
- 645              		.loc 1 431 12 discriminator 2
+ 645              		.loc 1 431 12
  646 0054 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  647 0056 5B00     		lsls	r3, r3, #1
- 648              		.loc 1 431 9 discriminator 2
+ 648              		.loc 1 431 9
  649 0058 0133     		adds	r3, r3, #1
  650 005a BA68     		ldr	r2, [r7, #8]
  651 005c 1344     		add	r3, r3, r2
- 652              		.loc 1 431 23 discriminator 2
+ 652              		.loc 1 431 23
  653 005e 0022     		movs	r2, #0
  654 0060 1A70     		strb	r2, [r3]
  418:USB_DEVICE/App/usbd_desc.c ****   {
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 20
+ARM GAS  /tmp/ccvEnTiG.s 			page 20
 
 
  655              		.loc 1 418 31 discriminator 2
@@ -1173,53 +1173,52 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 1
  681              	.LFE232:
  683              		.text
  684              	.Letext0:
- 685              		.file 2 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 686              		.file 3 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 687              		.file 4 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 688              		.file 5 "USB_DEVICE/App/usbd_desc.h"
- 689              		.file 6 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s 			page 21
+ 685              		.file 2 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h"
+ 686              		.file 3 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 687              		.file 4 "USB_DEVICE/App/usbd_desc.h"
+ 688              		.file 5 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
+ARM GAS  /tmp/ccvEnTiG.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_desc.c
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:24     .data.FS_Desc:00000000 FS_Desc
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:21     .data.FS_Desc:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:69     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:124    .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:250    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:182    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:302    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:358    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:426    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:37     .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:34     .data.USBD_FS_DeviceDesc:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:45     .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:42     .data.USBD_LangIDDesc:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:52     .bss.USBD_StrDesc:00000000 USBD_StrDesc
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:49     .bss.USBD_StrDesc:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:59     .data.USBD_StringSerial:00000000 USBD_StringSerial
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:56     .data.USBD_StringSerial:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:63     .text.USBD_FS_DeviceDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:113    .text.USBD_FS_DeviceDescriptor:00000020 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:118    .text.USBD_FS_LangIDStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:167    .text.USBD_FS_LangIDStrDescriptor:00000020 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:172    .rodata:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:176    .text.USBD_FS_ProductStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:234    .text.USBD_FS_ProductStrDescriptor:00000034 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:244    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:290    .text.USBD_FS_ManufacturerStrDescriptor:00000020 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:296    .text.USBD_FS_SerialStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:489    .text.Get_SerialNum:00000000 Get_SerialNum
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:343    .text.USBD_FS_SerialStrDescriptor:00000020 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:352    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:410    .text.USBD_FS_ConfigStrDescriptor:00000034 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:420    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:478    .text.USBD_FS_InterfaceStrDescriptor:00000034 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:484    .text.Get_SerialNum:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:568    .text.IntToUnicode:00000000 IntToUnicode
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:554    .text.Get_SerialNum:00000044 $d
-C:\Users\bruno\AppData\Local\Temp\ccIfD8Ok.s:563    .text.IntToUnicode:00000000 $t
+     /tmp/ccvEnTiG.s:25     .data.FS_Desc:00000000 FS_Desc
+     /tmp/ccvEnTiG.s:22     .data.FS_Desc:00000000 $d
+     /tmp/ccvEnTiG.s:70     .text.USBD_FS_DeviceDescriptor:00000000 USBD_FS_DeviceDescriptor
+     /tmp/ccvEnTiG.s:124    .text.USBD_FS_LangIDStrDescriptor:00000000 USBD_FS_LangIDStrDescriptor
+     /tmp/ccvEnTiG.s:250    .text.USBD_FS_ManufacturerStrDescriptor:00000000 USBD_FS_ManufacturerStrDescriptor
+     /tmp/ccvEnTiG.s:182    .text.USBD_FS_ProductStrDescriptor:00000000 USBD_FS_ProductStrDescriptor
+     /tmp/ccvEnTiG.s:302    .text.USBD_FS_SerialStrDescriptor:00000000 USBD_FS_SerialStrDescriptor
+     /tmp/ccvEnTiG.s:358    .text.USBD_FS_ConfigStrDescriptor:00000000 USBD_FS_ConfigStrDescriptor
+     /tmp/ccvEnTiG.s:426    .text.USBD_FS_InterfaceStrDescriptor:00000000 USBD_FS_InterfaceStrDescriptor
+     /tmp/ccvEnTiG.s:38     .data.USBD_FS_DeviceDesc:00000000 USBD_FS_DeviceDesc
+     /tmp/ccvEnTiG.s:35     .data.USBD_FS_DeviceDesc:00000000 $d
+     /tmp/ccvEnTiG.s:46     .data.USBD_LangIDDesc:00000000 USBD_LangIDDesc
+     /tmp/ccvEnTiG.s:43     .data.USBD_LangIDDesc:00000000 $d
+     /tmp/ccvEnTiG.s:53     .bss.USBD_StrDesc:00000000 USBD_StrDesc
+     /tmp/ccvEnTiG.s:50     .bss.USBD_StrDesc:00000000 $d
+     /tmp/ccvEnTiG.s:60     .data.USBD_StringSerial:00000000 USBD_StringSerial
+     /tmp/ccvEnTiG.s:57     .data.USBD_StringSerial:00000000 $d
+     /tmp/ccvEnTiG.s:64     .text.USBD_FS_DeviceDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:113    .text.USBD_FS_DeviceDescriptor:00000020 $d
+     /tmp/ccvEnTiG.s:118    .text.USBD_FS_LangIDStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:167    .text.USBD_FS_LangIDStrDescriptor:00000020 $d
+     /tmp/ccvEnTiG.s:172    .rodata:00000000 $d
+     /tmp/ccvEnTiG.s:176    .text.USBD_FS_ProductStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:234    .text.USBD_FS_ProductStrDescriptor:00000034 $d
+     /tmp/ccvEnTiG.s:244    .text.USBD_FS_ManufacturerStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:290    .text.USBD_FS_ManufacturerStrDescriptor:00000020 $d
+     /tmp/ccvEnTiG.s:296    .text.USBD_FS_SerialStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:489    .text.Get_SerialNum:00000000 Get_SerialNum
+     /tmp/ccvEnTiG.s:343    .text.USBD_FS_SerialStrDescriptor:00000020 $d
+     /tmp/ccvEnTiG.s:352    .text.USBD_FS_ConfigStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:410    .text.USBD_FS_ConfigStrDescriptor:00000034 $d
+     /tmp/ccvEnTiG.s:420    .text.USBD_FS_InterfaceStrDescriptor:00000000 $t
+     /tmp/ccvEnTiG.s:478    .text.USBD_FS_InterfaceStrDescriptor:00000034 $d
+     /tmp/ccvEnTiG.s:484    .text.Get_SerialNum:00000000 $t
+     /tmp/ccvEnTiG.s:568    .text.IntToUnicode:00000000 IntToUnicode
+     /tmp/ccvEnTiG.s:554    .text.Get_SerialNum:00000044 $d
+     /tmp/ccvEnTiG.s:563    .text.IntToUnicode:00000000 $t
 
 UNDEFINED SYMBOLS
 USBD_GetString

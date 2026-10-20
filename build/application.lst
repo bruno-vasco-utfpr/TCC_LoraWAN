@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 1
+ARM GAS  /tmp/ccTmCGHN.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,23 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.LoRaWAN_RxEventCallback,"ax",%progbits
-  20              		.align	1
-  21              		.global	LoRaWAN_RxEventCallback
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	LoRaWAN_RxEventCallback:
-  27              	.LFB224:
-  28              		.file 1 "Core/Src/application.c"
+  19              		.file 1 "Core/Src/application.c"
+  20              		.section	.bss.dados_solo,"aw",%nobits
+  21              		.align	2
+  24              	dados_solo:
+  25 0000 00000000 		.space	18
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      0000
+  26              		.section	.text.LoRaWAN_RxEventCallback,"ax",%progbits
+  27              		.align	1
+  28              		.global	LoRaWAN_RxEventCallback
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	LoRaWAN_RxEventCallback:
+  34              	.LFB224:
    1:Core/Src/application.c **** #include "cmsis_os.h"
    2:Core/Src/application.c **** #include "stm32f4xx_hal.h"
    3:Core/Src/application.c **** #include "radioenge_modem.h"
@@ -43,629 +51,541 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 1
   13:Core/Src/application.c **** extern TIM_HandleTypeDef htim1, htim3;
   14:Core/Src/application.c **** extern osMessageQueueId_t setPWMDutyQueueHandle;
   15:Core/Src/application.c **** 
-  16:Core/Src/application.c **** void LoRaWAN_RxEventCallback(uint8_t *data, uint32_t length, uint32_t port, int32_t rssi, int32_t s
-  17:Core/Src/application.c **** {
-  29              		.loc 1 17 1
-  30              		.cfi_startproc
-  31              		@ args = 4, pretend = 0, frame = 16
-  32              		@ frame_needed = 1, uses_anonymous_args = 0
-  33 0000 80B5     		push	{r7, lr}
-  34              	.LCFI0:
-  35              		.cfi_def_cfa_offset 8
-  36              		.cfi_offset 7, -8
-  37              		.cfi_offset 14, -4
-  38 0002 84B0     		sub	sp, sp, #16
-  39              	.LCFI1:
-  40              		.cfi_def_cfa_offset 24
-  41 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 2
+  16:Core/Src/application.c **** typedef struct {
+  17:Core/Src/application.c ****     uint32_t seq_no;
+  18:Core/Src/application.c ****     int16_t umidade;
+  19:Core/Src/application.c ****     int16_t temperatura;
+  20:Core/Src/application.c ****     uint16_t ec;
+  21:Core/Src/application.c ****     uint16_t ph;
+  22:Core/Src/application.c ****     uint16_t nitrogenio;
+ARM GAS  /tmp/ccTmCGHN.s 			page 2
 
 
-  42              	.LCFI2:
-  43              		.cfi_def_cfa_register 7
-  44 0006 F860     		str	r0, [r7, #12]
-  45 0008 B960     		str	r1, [r7, #8]
-  46 000a 7A60     		str	r2, [r7, #4]
-  47 000c 3B60     		str	r3, [r7]
-  18:Core/Src/application.c ****     osMessageQueuePut(setPWMDutyQueueHandle, &data, 0U, 0U);
-  48              		.loc 1 18 5
-  49 000e 064B     		ldr	r3, .L2
-  50 0010 1868     		ldr	r0, [r3]
-  51 0012 07F10C01 		add	r1, r7, #12
-  52 0016 0023     		movs	r3, #0
-  53 0018 0022     		movs	r2, #0
-  54 001a FFF7FEFF 		bl	osMessageQueuePut
-  19:Core/Src/application.c **** }
-  55              		.loc 1 19 1
-  56 001e 00BF     		nop
-  57 0020 1037     		adds	r7, r7, #16
-  58              	.LCFI3:
-  59              		.cfi_def_cfa_offset 8
-  60 0022 BD46     		mov	sp, r7
-  61              	.LCFI4:
-  62              		.cfi_def_cfa_register 13
-  63              		@ sp needed
-  64 0024 80BD     		pop	{r7, pc}
-  65              	.L3:
-  66 0026 00BF     		.align	2
-  67              	.L2:
-  68 0028 00000000 		.word	setPWMDutyQueueHandle
-  69              		.cfi_endproc
-  70              	.LFE224:
-  72              		.section	.text.PeriodicSendTimerCallback,"ax",%progbits
-  73              		.align	1
-  74              		.global	PeriodicSendTimerCallback
-  75              		.syntax unified
-  76              		.thumb
-  77              		.thumb_func
-  79              	PeriodicSendTimerCallback:
-  80              	.LFB225:
-  20:Core/Src/application.c **** 
-  21:Core/Src/application.c **** void PeriodicSendTimerCallback(void *argument)
-  22:Core/Src/application.c **** {
-  81              		.loc 1 22 1
-  82              		.cfi_startproc
-  83              		@ args = 0, pretend = 0, frame = 8
-  84              		@ frame_needed = 1, uses_anonymous_args = 0
-  85 0000 80B5     		push	{r7, lr}
-  86              	.LCFI5:
-  87              		.cfi_def_cfa_offset 8
-  88              		.cfi_offset 7, -8
-  89              		.cfi_offset 14, -4
-  90 0002 82B0     		sub	sp, sp, #8
-  91              	.LCFI6:
-  92              		.cfi_def_cfa_offset 16
-  93 0004 00AF     		add	r7, sp, #0
-  94              	.LCFI7:
-  95              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 3
+  23:Core/Src/application.c ****     uint16_t fosforo; 
+  24:Core/Src/application.c ****     uint16_t potassio; 
+  25:Core/Src/application.c **** }__attribute__((packed))  LoRaSoilData_t;  
+  26:Core/Src/application.c **** 
+  27:Core/Src/application.c **** static LoRaSoilData_t dados_solo={
+  28:Core/Src/application.c ****     .seq_no = 0,
+  29:Core/Src/application.c ****     .umidade = 0,
+  30:Core/Src/application.c ****     .temperatura = 0,
+  31:Core/Src/application.c ****     .ec = 0,
+  32:Core/Src/application.c ****     .ph = 0,
+  33:Core/Src/application.c ****     .nitrogenio = 0,
+  34:Core/Src/application.c ****     .fosforo = 0,
+  35:Core/Src/application.c ****     .potassio = 0
+  36:Core/Src/application.c **** };
+  37:Core/Src/application.c **** 
+  38:Core/Src/application.c **** 
+  39:Core/Src/application.c **** void LoRaWAN_RxEventCallback(uint8_t *data, uint32_t length, uint32_t port, int32_t rssi, int32_t s
+  40:Core/Src/application.c **** {
+  35              		.loc 1 40 1
+  36              		.cfi_startproc
+  37              		@ args = 4, pretend = 0, frame = 16
+  38              		@ frame_needed = 1, uses_anonymous_args = 0
+  39 0000 80B5     		push	{r7, lr}
+  40              	.LCFI0:
+  41              		.cfi_def_cfa_offset 8
+  42              		.cfi_offset 7, -8
+  43              		.cfi_offset 14, -4
+  44 0002 84B0     		sub	sp, sp, #16
+  45              	.LCFI1:
+  46              		.cfi_def_cfa_offset 24
+  47 0004 00AF     		add	r7, sp, #0
+  48              	.LCFI2:
+  49              		.cfi_def_cfa_register 7
+  50 0006 F860     		str	r0, [r7, #12]
+  51 0008 B960     		str	r1, [r7, #8]
+  52 000a 7A60     		str	r2, [r7, #4]
+  53 000c 3B60     		str	r3, [r7]
+  41:Core/Src/application.c ****     osMessageQueuePut(setPWMDutyQueueHandle, data, 0U, 0U); 
+  54              		.loc 1 41 5
+  55 000e 054B     		ldr	r3, .L2
+  56 0010 1868     		ldr	r0, [r3]
+  57 0012 0023     		movs	r3, #0
+  58 0014 0022     		movs	r2, #0
+  59 0016 F968     		ldr	r1, [r7, #12]
+  60 0018 FFF7FEFF 		bl	osMessageQueuePut
+  42:Core/Src/application.c **** }
+  61              		.loc 1 42 1
+  62 001c 00BF     		nop
+  63 001e 1037     		adds	r7, r7, #16
+  64              	.LCFI3:
+  65              		.cfi_def_cfa_offset 8
+  66 0020 BD46     		mov	sp, r7
+  67              	.LCFI4:
+  68              		.cfi_def_cfa_register 13
+  69              		@ sp needed
+  70 0022 80BD     		pop	{r7, pc}
+  71              	.L3:
+ARM GAS  /tmp/ccTmCGHN.s 			page 3
 
 
-  96 0006 7860     		str	r0, [r7, #4]
-  23:Core/Src/application.c ****     osThreadFlagsSet(AppSendTaskHandle, 0x01);
-  97              		.loc 1 23 5
-  98 0008 044B     		ldr	r3, .L5
-  99 000a 1B68     		ldr	r3, [r3]
- 100 000c 0121     		movs	r1, #1
- 101 000e 1846     		mov	r0, r3
- 102 0010 FFF7FEFF 		bl	osThreadFlagsSet
-  24:Core/Src/application.c **** }
- 103              		.loc 1 24 1
- 104 0014 00BF     		nop
- 105 0016 0837     		adds	r7, r7, #8
- 106              	.LCFI8:
- 107              		.cfi_def_cfa_offset 8
- 108 0018 BD46     		mov	sp, r7
- 109              	.LCFI9:
- 110              		.cfi_def_cfa_register 13
- 111              		@ sp needed
- 112 001a 80BD     		pop	{r7, pc}
- 113              	.L6:
- 114              		.align	2
- 115              	.L5:
- 116 001c 00000000 		.word	AppSendTaskHandle
- 117              		.cfi_endproc
- 118              	.LFE225:
- 120              		.global	__aeabi_f2d
- 121              		.global	__aeabi_d2f
- 122              		.global	__aeabi_dsub
- 123              		.section	.text.AppSendTaskCode,"ax",%progbits
- 124              		.align	1
- 125              		.global	AppSendTaskCode
- 126              		.syntax unified
- 127              		.thumb
- 128              		.thumb_func
- 130              	AppSendTaskCode:
- 131              	.LFB226:
-  25:Core/Src/application.c **** 
-  26:Core/Src/application.c **** void AppSendTaskCode(void *argument)
-  27:Core/Src/application.c **** {
- 132              		.loc 1 27 1
- 133              		.cfi_startproc
- 134              		@ args = 0, pretend = 0, frame = 56
- 135              		@ frame_needed = 1, uses_anonymous_args = 0
- 136 0000 80B5     		push	{r7, lr}
- 137              	.LCFI10:
- 138              		.cfi_def_cfa_offset 8
- 139              		.cfi_offset 7, -8
- 140              		.cfi_offset 14, -4
- 141 0002 8EB0     		sub	sp, sp, #56
- 142              	.LCFI11:
- 143              		.cfi_def_cfa_offset 64
- 144 0004 00AF     		add	r7, sp, #0
- 145              	.LCFI12:
- 146              		.cfi_def_cfa_register 7
- 147 0006 7860     		str	r0, [r7, #4]
-  28:Core/Src/application.c ****     /* USER CODE BEGIN 5 */
-  29:Core/Src/application.c ****     /* Infinite loop */
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 4
-
-
-  30:Core/Src/application.c ****     uint32_t read;
-  31:Core/Src/application.c ****     TEMPERATURE_OBJ_t temp;
-  32:Core/Src/application.c ****     uint32_t modemflags;
-  33:Core/Src/application.c ****     osTimerStart(PeriodicSendTimerHandle, 30000U);
- 148              		.loc 1 33 5
- 149 0008 5D4B     		ldr	r3, .L9+8
- 150 000a 1B68     		ldr	r3, [r3]
- 151 000c 47F23051 		movw	r1, #30000
- 152 0010 1846     		mov	r0, r3
- 153 0012 FFF7FEFF 		bl	osTimerStart
-  34:Core/Src/application.c ****     temp.seq_no = 0;
- 154              		.loc 1 34 17
- 155 0016 0023     		movs	r3, #0
- 156 0018 BB60     		str	r3, [r7, #8]
-  35:Core/Src/application.c ****     const float dividerVoltage_mV = 3300.0; //KY-013 voltage in millivolts.
- 157              		.loc 1 35 17
- 158 001a 5A4B     		ldr	r3, .L9+12
- 159 001c 7B63     		str	r3, [r7, #52]	@ float
-  36:Core/Src/application.c ****     const float cA = 0.001129148; //Steinhart-Hart Equation coefficient A
- 160              		.loc 1 36 17
- 161 001e 5A4B     		ldr	r3, .L9+16
- 162 0020 3B63     		str	r3, [r7, #48]	@ float
-  37:Core/Src/application.c ****     const float cB = 0.000234125; //Steinhart-Hart Equation coefficient B
- 163              		.loc 1 37 17
- 164 0022 5A4B     		ldr	r3, .L9+20
- 165 0024 FB62     		str	r3, [r7, #44]	@ float
-  38:Core/Src/application.c ****     const float cC = 0.0000000876741; //Steinhart-Hart Equation coefficient C
- 166              		.loc 1 38 17
- 167 0026 5A4B     		ldr	r3, .L9+24
- 168 0028 BB62     		str	r3, [r7, #40]	@ float
-  39:Core/Src/application.c ****     const float divider_R=10e3; //value of the KY-013 fixed resistor
- 169              		.loc 1 39 17
- 170 002a 5A4B     		ldr	r3, .L9+28
- 171 002c 7B62     		str	r3, [r7, #36]	@ float
- 172              	.L8:
-  40:Core/Src/application.c ****     float thermistor_R, logThermistor_R; //thermistor resistance and the natural logarithm of the t
-  41:Core/Src/application.c ****     float tempThermistor;
-  42:Core/Src/application.c ****     float mV; //read voltage in millivots
+  72              		.align	2
+  73              	.L2:
+  74 0024 00000000 		.word	setPWMDutyQueueHandle
+  75              		.cfi_endproc
+  76              	.LFE224:
+  78              		.section	.text.PeriodicSendTimerCallback,"ax",%progbits
+  79              		.align	1
+  80              		.global	PeriodicSendTimerCallback
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  85              	PeriodicSendTimerCallback:
+  86              	.LFB225:
   43:Core/Src/application.c **** 
-  44:Core/Src/application.c ****     while (1)
-  45:Core/Src/application.c ****     {
-  46:Core/Src/application.c ****         LoRaWaitDutyCycle();
- 173              		.loc 1 46 9 discriminator 1
- 174 002e FFF7FEFF 		bl	LoRaWaitDutyCycle
-  47:Core/Src/application.c ****         HAL_ADC_Start(&hadc1);
- 175              		.loc 1 47 9 discriminator 1
- 176 0032 5948     		ldr	r0, .L9+32
- 177 0034 FFF7FEFF 		bl	HAL_ADC_Start
-  48:Core/Src/application.c ****         HAL_ADC_PollForConversion(&hadc1, 100);
- 178              		.loc 1 48 9 discriminator 1
- 179 0038 6421     		movs	r1, #100
- 180 003a 5748     		ldr	r0, .L9+32
- 181 003c FFF7FEFF 		bl	HAL_ADC_PollForConversion
-  49:Core/Src/application.c ****         read = HAL_ADC_GetValue(&hadc1);
- 182              		.loc 1 49 16 discriminator 1
- 183 0040 5548     		ldr	r0, .L9+32
- 184 0042 FFF7FEFF 		bl	HAL_ADC_GetValue
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 5
+  44:Core/Src/application.c **** void PeriodicSendTimerCallback(void *argument)
+  45:Core/Src/application.c **** {
+  87              		.loc 1 45 1
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 8
+  90              		@ frame_needed = 1, uses_anonymous_args = 0
+  91 0000 80B5     		push	{r7, lr}
+  92              	.LCFI5:
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 7, -8
+  95              		.cfi_offset 14, -4
+  96 0002 82B0     		sub	sp, sp, #8
+  97              	.LCFI6:
+  98              		.cfi_def_cfa_offset 16
+  99 0004 00AF     		add	r7, sp, #0
+ 100              	.LCFI7:
+ 101              		.cfi_def_cfa_register 7
+ 102 0006 7860     		str	r0, [r7, #4]
+  46:Core/Src/application.c ****     osThreadFlagsSet(AppSendTaskHandle, 0x01);
+ 103              		.loc 1 46 5
+ 104 0008 044B     		ldr	r3, .L5
+ 105 000a 1B68     		ldr	r3, [r3]
+ 106 000c 0121     		movs	r1, #1
+ 107 000e 1846     		mov	r0, r3
+ 108 0010 FFF7FEFF 		bl	osThreadFlagsSet
+  47:Core/Src/application.c **** }
+ 109              		.loc 1 47 1
+ 110 0014 00BF     		nop
+ 111 0016 0837     		adds	r7, r7, #8
+ 112              	.LCFI8:
+ 113              		.cfi_def_cfa_offset 8
+ 114 0018 BD46     		mov	sp, r7
+ 115              	.LCFI9:
+ 116              		.cfi_def_cfa_register 13
+ 117              		@ sp needed
+ 118 001a 80BD     		pop	{r7, pc}
+ 119              	.L6:
+ 120              		.align	2
+ 121              	.L5:
+ 122 001c 00000000 		.word	AppSendTaskHandle
+ 123              		.cfi_endproc
+ 124              	.LFE225:
+ 126              		.section	.text.setPWMDutyTaskCode,"ax",%progbits
+ARM GAS  /tmp/ccTmCGHN.s 			page 4
 
 
- 185 0046 3862     		str	r0, [r7, #32]
-  50:Core/Src/application.c ****         temp.temp_oCx100 = (int32_t)(330 * ((float)read / 4096));
- 186              		.loc 1 50 45 discriminator 1
- 187 0048 3B6A     		ldr	r3, [r7, #32]
- 188 004a 07EE903A 		vmov	s15, r3	@ int
- 189 004e B8EE677A 		vcvt.f32.u32	s14, s15
- 190              		.loc 1 50 57 discriminator 1
- 191 0052 DFED526A 		vldr.32	s13, .L9+36
- 192 0056 C7EE267A 		vdiv.f32	s15, s14, s13
- 193              		.loc 1 50 42 discriminator 1
- 194 005a 9FED517A 		vldr.32	s14, .L9+40
- 195 005e 67EE877A 		vmul.f32	s15, s15, s14
- 196              		.loc 1 50 28 discriminator 1
- 197 0062 FDEEE77A 		vcvt.s32.f32	s15, s15
- 198 0066 17EE903A 		vmov	r3, s15	@ int
- 199              		.loc 1 50 26 discriminator 1
- 200 006a FB60     		str	r3, [r7, #12]
-  51:Core/Src/application.c ****         mV = dividerVoltage_mV*read/4095.0; //convert ADC reading to mV
- 201              		.loc 1 51 31 discriminator 1
- 202 006c 3B6A     		ldr	r3, [r7, #32]
- 203 006e 07EE903A 		vmov	s15, r3	@ int
- 204 0072 B8EE677A 		vcvt.f32.u32	s14, s15
- 205 0076 D7ED0D7A 		vldr.32	s15, [r7, #52]
- 206 007a 27EE277A 		vmul.f32	s14, s14, s15
- 207              		.loc 1 51 12 discriminator 1
- 208 007e DFED496A 		vldr.32	s13, .L9+44
- 209 0082 C7EE267A 		vdiv.f32	s15, s14, s13
- 210 0086 C7ED077A 		vstr.32	s15, [r7, #28]
-  52:Core/Src/application.c ****         thermistor_R = (dividerVoltage_mV*divider_R - divider_R*mV)/(mV); //calculate the thermisto
- 211              		.loc 1 52 42 discriminator 1
- 212 008a 97ED0D7A 		vldr.32	s14, [r7, #52]
- 213 008e D7ED097A 		vldr.32	s15, [r7, #36]
- 214 0092 27EE277A 		vmul.f32	s14, s14, s15
- 215              		.loc 1 52 64 discriminator 1
- 216 0096 D7ED096A 		vldr.32	s13, [r7, #36]
- 217 009a D7ED077A 		vldr.32	s15, [r7, #28]
- 218 009e 66EEA77A 		vmul.f32	s15, s13, s15
- 219              		.loc 1 52 53 discriminator 1
- 220 00a2 77EE676A 		vsub.f32	s13, s14, s15
- 221              		.loc 1 52 22 discriminator 1
- 222 00a6 97ED077A 		vldr.32	s14, [r7, #28]
- 223 00aa C6EE877A 		vdiv.f32	s15, s13, s14
- 224 00ae C7ED067A 		vstr.32	s15, [r7, #24]
-  53:Core/Src/application.c ****         logThermistor_R = log(thermistor_R); //calculate the natural logarithm of the thermistor re
- 225              		.loc 1 53 27 discriminator 1
- 226 00b2 B869     		ldr	r0, [r7, #24]	@ float
- 227 00b4 FFF7FEFF 		bl	__aeabi_f2d
- 228 00b8 0246     		mov	r2, r0
- 229 00ba 0B46     		mov	r3, r1
- 230 00bc 43EC102B 		vmov	d0, r2, r3
- 231 00c0 FFF7FEFF 		bl	log
- 232 00c4 53EC102B 		vmov	r2, r3, d0
- 233              		.loc 1 53 25 discriminator 1
- 234 00c8 1046     		mov	r0, r2
- 235 00ca 1946     		mov	r1, r3
- 236 00cc FFF7FEFF 		bl	__aeabi_d2f
- 237 00d0 0346     		mov	r3, r0	@ float
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 6
+ 127              		.align	1
+ 128              		.global	setPWMDutyTaskCode
+ 129              		.syntax unified
+ 130              		.thumb
+ 131              		.thumb_func
+ 133              	setPWMDutyTaskCode:
+ 134              	.LFB226:
+  48:Core/Src/application.c **** 
+  49:Core/Src/application.c **** 
+  50:Core/Src/application.c **** 
+  51:Core/Src/application.c **** void setPWMDutyTaskCode(void *argument)
+  52:Core/Src/application.c **** {
+ 135              		.loc 1 52 1
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 24
+ 138              		@ frame_needed = 1, uses_anonymous_args = 0
+ 139 0000 80B5     		push	{r7, lr}
+ 140              	.LCFI10:
+ 141              		.cfi_def_cfa_offset 8
+ 142              		.cfi_offset 7, -8
+ 143              		.cfi_offset 14, -4
+ 144 0002 86B0     		sub	sp, sp, #24
+ 145              	.LCFI11:
+ 146              		.cfi_def_cfa_offset 32
+ 147 0004 00AF     		add	r7, sp, #0
+ 148              	.LCFI12:
+ 149              		.cfi_def_cfa_register 7
+ 150 0006 7860     		str	r0, [r7, #4]
+ 151              	.L9:
+  53:Core/Src/application.c ****     PUMP_CONTROLLER_OBJ_t *data,pwmData;
+  54:Core/Src/application.c ****     osStatus_t pwmEvent; 
+  55:Core/Src/application.c ****     while(1)
+  56:Core/Src/application.c ****     {
+  57:Core/Src/application.c ****         pwmEvent = osMessageQueueGet(setPWMDutyQueueHandle, &data, NULL, osWaitForever);   // wait 
+ 152              		.loc 1 57 20
+ 153 0008 144B     		ldr	r3, .L10
+ 154 000a 1868     		ldr	r0, [r3]
+ 155 000c 07F11001 		add	r1, r7, #16
+ 156 0010 4FF0FF33 		mov	r3, #-1
+ 157 0014 0022     		movs	r2, #0
+ 158 0016 FFF7FEFF 		bl	osMessageQueueGet
+ 159 001a 7861     		str	r0, [r7, #20]
+  58:Core/Src/application.c ****         memcpy(&pwmData,data,sizeof(PUMP_CONTROLLER_OBJ_t));
+ 160              		.loc 1 58 9
+ 161 001c 3A69     		ldr	r2, [r7, #16]
+ 162 001e 07F10C03 		add	r3, r7, #12
+ 163 0022 1188     		ldrh	r1, [r2]	@ unaligned
+ 164 0024 9278     		ldrb	r2, [r2, #2]
+ 165 0026 1980     		strh	r1, [r3]	@ unaligned
+ 166 0028 9A70     		strb	r2, [r3, #2]
+  59:Core/Src/application.c ****         if (pwmEvent == osOK)
+ 167              		.loc 1 59 12
+ 168 002a 7B69     		ldr	r3, [r7, #20]
+ 169 002c 002B     		cmp	r3, #0
+ 170 002e EBD1     		bne	.L9
+  60:Core/Src/application.c ****         {
+  61:Core/Src/application.c ****             htim1.Instance->CCR1 = (htim1.Instance->ARR * pwmData.irrigacao);
+ARM GAS  /tmp/ccTmCGHN.s 			page 5
 
 
- 238 00d2 7B61     		str	r3, [r7, #20]	@ float
-  54:Core/Src/application.c ****         tempThermistor = (1.0 / (cA + cB*logThermistor_R + cC*logThermistor_R*logThermistor_R*logTh
- 239              		.loc 1 54 41 discriminator 1
- 240 00d4 97ED0B7A 		vldr.32	s14, [r7, #44]
- 241 00d8 D7ED057A 		vldr.32	s15, [r7, #20]
- 242 00dc 27EE277A 		vmul.f32	s14, s14, s15
- 243              		.loc 1 54 37 discriminator 1
- 244 00e0 D7ED0C7A 		vldr.32	s15, [r7, #48]
- 245 00e4 37EE277A 		vadd.f32	s14, s14, s15
- 246              		.loc 1 54 62 discriminator 1
- 247 00e8 D7ED0A6A 		vldr.32	s13, [r7, #40]
- 248 00ec D7ED057A 		vldr.32	s15, [r7, #20]
- 249 00f0 66EEA76A 		vmul.f32	s13, s13, s15
- 250              		.loc 1 54 78 discriminator 1
- 251 00f4 D7ED057A 		vldr.32	s15, [r7, #20]
- 252 00f8 66EEA76A 		vmul.f32	s13, s13, s15
- 253              		.loc 1 54 94 discriminator 1
- 254 00fc D7ED057A 		vldr.32	s15, [r7, #20]
- 255 0100 66EEA77A 		vmul.f32	s15, s13, s15
- 256              		.loc 1 54 58 discriminator 1
- 257 0104 37EE277A 		vadd.f32	s14, s14, s15
- 258              		.loc 1 54 24 discriminator 1
- 259 0108 F7EE006A 		vmov.f32	s13, #1.0e+0
- 260 010c C6EE877A 		vdiv.f32	s15, s13, s14
- 261 0110 C7ED047A 		vstr.32	s15, [r7, #16]
-  55:Core/Src/application.c ****         tempThermistor = tempThermistor - 273.15; //convert Kelvin to Celsius
- 262              		.loc 1 55 41 discriminator 1
- 263 0114 3869     		ldr	r0, [r7, #16]	@ float
- 264 0116 FFF7FEFF 		bl	__aeabi_f2d
- 265 011a 17A3     		adr	r3, .L9
- 266 011c D3E90023 		ldrd	r2, [r3]
- 267 0120 FFF7FEFF 		bl	__aeabi_dsub
- 268 0124 0246     		mov	r2, r0
- 269 0126 0B46     		mov	r3, r1
- 270              		.loc 1 55 24 discriminator 1
- 271 0128 1046     		mov	r0, r2
- 272 012a 1946     		mov	r1, r3
- 273 012c FFF7FEFF 		bl	__aeabi_d2f
- 274 0130 0346     		mov	r3, r0	@ float
- 275 0132 3B61     		str	r3, [r7, #16]	@ float
-  56:Core/Src/application.c ****         temp.temp_oCx100 = tempThermistor*100;
- 276              		.loc 1 56 42 discriminator 1
- 277 0134 D7ED047A 		vldr.32	s15, [r7, #16]
- 278 0138 9FED1B7A 		vldr.32	s14, .L9+48
- 279 013c 67EE877A 		vmul.f32	s15, s15, s14
- 280              		.loc 1 56 26 discriminator 1
- 281 0140 FDEEE77A 		vcvt.s32.f32	s15, s15
- 282 0144 17EE903A 		vmov	r3, s15	@ int
- 283 0148 FB60     		str	r3, [r7, #12]
-  57:Core/Src/application.c ****         LoRaSendBNow(2, (uint8_t *)&temp, sizeof(TEMPERATURE_OBJ_t));
- 284              		.loc 1 57 9 discriminator 1
- 285 014a 07F10803 		add	r3, r7, #8
- 286 014e 0822     		movs	r2, #8
- 287 0150 1946     		mov	r1, r3
- 288 0152 0220     		movs	r0, #2
- 289 0154 FFF7FEFF 		bl	LoRaSendBNow
-  58:Core/Src/application.c ****         temp.seq_no++;
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 7
+ 171              		.loc 1 61 42
+ 172 0030 0B4B     		ldr	r3, .L10+4
+ 173 0032 1B68     		ldr	r3, [r3]
+ 174              		.loc 1 61 51
+ 175 0034 DA6A     		ldr	r2, [r3, #44]
+ 176              		.loc 1 61 66
+ 177 0036 BB89     		ldrh	r3, [r7, #12]
+ 178 0038 1946     		mov	r1, r3
+ 179              		.loc 1 61 18
+ 180 003a 094B     		ldr	r3, .L10+4
+ 181 003c 1B68     		ldr	r3, [r3]
+ 182              		.loc 1 61 57
+ 183 003e 01FB02F2 		mul	r2, r1, r2
+ 184              		.loc 1 61 34
+ 185 0042 5A63     		str	r2, [r3, #52]
+  62:Core/Src/application.c ****             
+  63:Core/Src/application.c ****             htim3.Instance->CCR2 = (htim3.Instance->ARR * pwmData.irrigacao);
+ 186              		.loc 1 63 42
+ 187 0044 074B     		ldr	r3, .L10+8
+ 188 0046 1B68     		ldr	r3, [r3]
+ 189              		.loc 1 63 51
+ 190 0048 DA6A     		ldr	r2, [r3, #44]
+ 191              		.loc 1 63 66
+ 192 004a BB89     		ldrh	r3, [r7, #12]
+ 193 004c 1946     		mov	r1, r3
+ 194              		.loc 1 63 18
+ 195 004e 054B     		ldr	r3, .L10+8
+ 196 0050 1B68     		ldr	r3, [r3]
+ 197              		.loc 1 63 57
+ 198 0052 01FB02F2 		mul	r2, r1, r2
+ 199              		.loc 1 63 34
+ 200 0056 9A63     		str	r2, [r3, #56]
+  57:Core/Src/application.c ****         memcpy(&pwmData,data,sizeof(PUMP_CONTROLLER_OBJ_t));
+ 201              		.loc 1 57 18
+ 202 0058 D6E7     		b	.L9
+ 203              	.L11:
+ 204 005a 00BF     		.align	2
+ 205              	.L10:
+ 206 005c 00000000 		.word	setPWMDutyQueueHandle
+ 207 0060 00000000 		.word	htim1
+ 208 0064 00000000 		.word	htim3
+ 209              		.cfi_endproc
+ 210              	.LFE226:
+ 212              		.global	sensorDeSolo
+ 213              		.section	.bss.sensorDeSolo,"aw",%nobits
+ 214              		.align	2
+ 217              	sensorDeSolo:
+ 218 0000 00000000 		.space	40
+ 218      00000000 
+ 218      00000000 
+ 218      00000000 
+ 218      00000000 
+ 219              		.section	.text.SoilSensorTaskCode,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	SoilSensorTaskCode
+ 222              		.syntax unified
+ 223              		.thumb
+ARM GAS  /tmp/ccTmCGHN.s 			page 6
 
 
- 290              		.loc 1 58 13 discriminator 1
- 291 0158 BB68     		ldr	r3, [r7, #8]
- 292              		.loc 1 58 20 discriminator 1
- 293 015a 0133     		adds	r3, r3, #1
- 294 015c BB60     		str	r3, [r7, #8]
-  59:Core/Src/application.c ****         osThreadFlagsClear(0x01);
- 295              		.loc 1 59 9 discriminator 1
- 296 015e 0120     		movs	r0, #1
- 297 0160 FFF7FEFF 		bl	osThreadFlagsClear
-  60:Core/Src/application.c ****         osThreadFlagsWait(0x01, osFlagsWaitAny, osWaitForever);
- 298              		.loc 1 60 9 discriminator 1
- 299 0164 4FF0FF32 		mov	r2, #-1
- 300 0168 0021     		movs	r1, #0
- 301 016a 0120     		movs	r0, #1
- 302 016c FFF7FEFF 		bl	osThreadFlagsWait
-  46:Core/Src/application.c ****         HAL_ADC_Start(&hadc1);
- 303              		.loc 1 46 9 discriminator 1
- 304 0170 5DE7     		b	.L8
- 305              	.L10:
- 306 0172 00BFAFF3 		.align	3
- 306      0080
- 307              	.L9:
- 308 0178 66666666 		.word	1717986918
- 309 017c 66127140 		.word	1081152102
- 310 0180 00000000 		.word	PeriodicSendTimerHandle
- 311 0184 00404E45 		.word	1162756096
- 312 0188 EBFF933A 		.word	982777835
- 313 018c 737F7539 		.word	964001651
- 314 0190 5947BC33 		.word	867977049
- 315 0194 00401C46 		.word	1176256512
- 316 0198 00000000 		.word	hadc1
- 317 019c 00008045 		.word	1166016512
- 318 01a0 0000A543 		.word	1134886912
- 319 01a4 00F07F45 		.word	1166012416
- 320 01a8 0000C842 		.word	1120403456
- 321              		.cfi_endproc
- 322              	.LFE226:
- 324              		.section	.text.setPWMDutyTaskCode,"ax",%progbits
- 325              		.align	1
- 326              		.global	setPWMDutyTaskCode
- 327              		.syntax unified
- 328              		.thumb
- 329              		.thumb_func
- 331              	setPWMDutyTaskCode:
- 332              	.LFB227:
-  61:Core/Src/application.c ****     }
-  62:Core/Src/application.c **** }
-  63:Core/Src/application.c **** 
-  64:Core/Src/application.c **** void setPWMDutyTaskCode(void *argument)
-  65:Core/Src/application.c **** {
- 333              		.loc 1 65 1
- 334              		.cfi_startproc
- 335              		@ args = 0, pretend = 0, frame = 24
- 336              		@ frame_needed = 1, uses_anonymous_args = 0
- 337 0000 80B5     		push	{r7, lr}
- 338              	.LCFI13:
- 339              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 8
+ 224              		.thumb_func
+ 226              	SoilSensorTaskCode:
+ 227              	.LFB227:
+  64:Core/Src/application.c **** 
+  65:Core/Src/application.c ****         }
+  66:Core/Src/application.c ****     }
+  67:Core/Src/application.c **** }
+  68:Core/Src/application.c **** 
+  69:Core/Src/application.c **** 
+  70:Core/Src/application.c **** extern UART_HandleTypeDef huart2;
+  71:Core/Src/application.c **** SoilSensor sensorDeSolo;
+  72:Core/Src/application.c **** 
+  73:Core/Src/application.c **** void SoilSensorTaskCode(void const * argument) {
+ 228              		.loc 1 73 48
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 8
+ 231              		@ frame_needed = 1, uses_anonymous_args = 0
+ 232 0000 80B5     		push	{r7, lr}
+ 233              	.LCFI13:
+ 234              		.cfi_def_cfa_offset 8
+ 235              		.cfi_offset 7, -8
+ 236              		.cfi_offset 14, -4
+ 237 0002 82B0     		sub	sp, sp, #8
+ 238              	.LCFI14:
+ 239              		.cfi_def_cfa_offset 16
+ 240 0004 00AF     		add	r7, sp, #0
+ 241              	.LCFI15:
+ 242              		.cfi_def_cfa_register 7
+ 243 0006 7860     		str	r0, [r7, #4]
+  74:Core/Src/application.c **** 
+  75:Core/Src/application.c ****     if (!SoilSensor_Init(&sensorDeSolo, &huart2)) {
+ 244              		.loc 1 75 10
+ 245 0008 1649     		ldr	r1, .L15
+ 246 000a 1748     		ldr	r0, .L15+4
+ 247 000c FFF7FEFF 		bl	SoilSensor_Init
+ 248              	.L14:
+  76:Core/Src/application.c ****         // Erro: Sensor não encontrado ou cabo solto
+  77:Core/Src/application.c ****     }
+  78:Core/Src/application.c ****     
+  79:Core/Src/application.c ****     while (1) 
+  80:Core/Src/application.c ****     {
+  81:Core/Src/application.c ****         if (SoilSensor_ReadAllVariables(&sensorDeSolo)) {
+ 249              		.loc 1 81 13
+ 250 0010 1548     		ldr	r0, .L15+4
+ 251 0012 FFF7FEFF 		bl	SoilSensor_ReadAllVariables
+ 252 0016 0346     		mov	r3, r0
+ 253              		.loc 1 81 12 discriminator 1
+ 254 0018 002B     		cmp	r3, #0
+ 255 001a 1DD0     		beq	.L13
+  82:Core/Src/application.c ****             dados_solo.umidade     = sensorDeSolo.humidity;
+ 256              		.loc 1 82 50
+ 257 001c 124B     		ldr	r3, .L15+4
+ 258 001e B3F90620 		ldrsh	r2, [r3, #6]
+ 259              		.loc 1 82 36
+ 260 0022 124B     		ldr	r3, .L15+8
+ 261 0024 9A80     		strh	r2, [r3, #4]	@ movhi
+  83:Core/Src/application.c ****             dados_solo.temperatura = sensorDeSolo.temperature;
+ARM GAS  /tmp/ccTmCGHN.s 			page 7
 
 
- 340              		.cfi_offset 7, -8
- 341              		.cfi_offset 14, -4
- 342 0002 86B0     		sub	sp, sp, #24
- 343              	.LCFI14:
- 344              		.cfi_def_cfa_offset 32
- 345 0004 00AF     		add	r7, sp, #0
- 346              	.LCFI15:
- 347              		.cfi_def_cfa_register 7
- 348 0006 7860     		str	r0, [r7, #4]
- 349              	.L13:
-  66:Core/Src/application.c ****     AC_CONTROLLER_OBJ_t *data,pwmData;
-  67:Core/Src/application.c ****     osStatus_t pwmEvent; 
-  68:Core/Src/application.c ****     while(1)
-  69:Core/Src/application.c ****     {
-  70:Core/Src/application.c ****         pwmEvent = osMessageQueueGet(setPWMDutyQueueHandle, &data, NULL, osWaitForever);   // wait 
- 350              		.loc 1 70 20
- 351 0008 174B     		ldr	r3, .L14
- 352 000a 1868     		ldr	r0, [r3]
- 353 000c 07F11001 		add	r1, r7, #16
- 354 0010 4FF0FF33 		mov	r3, #-1
- 355 0014 0022     		movs	r2, #0
- 356 0016 FFF7FEFF 		bl	osMessageQueueGet
- 357 001a 7861     		str	r0, [r7, #20]
-  71:Core/Src/application.c ****         memcpy(&pwmData,data,sizeof(AC_CONTROLLER_OBJ_t));
- 358              		.loc 1 71 9
- 359 001c 3A69     		ldr	r2, [r7, #16]
- 360 001e 07F10C03 		add	r3, r7, #12
- 361 0022 1188     		ldrh	r1, [r2]	@ unaligned
- 362 0024 9278     		ldrb	r2, [r2, #2]
- 363 0026 1980     		strh	r1, [r3]	@ unaligned
- 364 0028 9A70     		strb	r2, [r3, #2]
-  72:Core/Src/application.c ****         if (pwmEvent == osOK)
- 365              		.loc 1 72 12
- 366 002a 7B69     		ldr	r3, [r7, #20]
- 367 002c 002B     		cmp	r3, #0
- 368 002e EBD1     		bne	.L13
-  73:Core/Src/application.c ****         {
-  74:Core/Src/application.c ****             //memcpy(&ocPWM_data,&data,sizeof(AC_CONTROLLER_OBJ_t));
-  75:Core/Src/application.c ****             htim1.Instance->CCR1 = (htim1.Instance->ARR*(pwmData.compressor_power))/100;
- 369              		.loc 1 75 42
- 370 0030 0E4B     		ldr	r3, .L14+4
- 371 0032 1B68     		ldr	r3, [r3]
- 372              		.loc 1 75 51
- 373 0034 DB6A     		ldr	r3, [r3, #44]
- 374              		.loc 1 75 65
- 375 0036 BA89     		ldrh	r2, [r7, #12]
- 376              		.loc 1 75 56
- 377 0038 03FB02F2 		mul	r2, r3, r2
- 378              		.loc 1 75 18
- 379 003c 0B4B     		ldr	r3, .L14+4
- 380 003e 1B68     		ldr	r3, [r3]
- 381              		.loc 1 75 84
- 382 0040 0B49     		ldr	r1, .L14+8
- 383 0042 A1FB0212 		umull	r1, r2, r1, r2
- 384 0046 5209     		lsrs	r2, r2, #5
- 385              		.loc 1 75 34
- 386 0048 5A63     		str	r2, [r3, #52]
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 9
+ 262              		.loc 1 83 50
+ 263 0026 104B     		ldr	r3, .L15+4
+ 264 0028 B3F90420 		ldrsh	r2, [r3, #4]
+ 265              		.loc 1 83 36
+ 266 002c 0F4B     		ldr	r3, .L15+8
+ 267 002e DA80     		strh	r2, [r3, #6]	@ movhi
+  84:Core/Src/application.c ****             dados_solo.ec          = sensorDeSolo.ec;
+ 268              		.loc 1 84 50
+ 269 0030 0D4B     		ldr	r3, .L15+4
+ 270 0032 1A89     		ldrh	r2, [r3, #8]
+ 271              		.loc 1 84 36
+ 272 0034 0D4B     		ldr	r3, .L15+8
+ 273 0036 1A81     		strh	r2, [r3, #8]	@ movhi
+  85:Core/Src/application.c ****             dados_solo.ph          = sensorDeSolo.ph;
+ 274              		.loc 1 85 50
+ 275 0038 0B4B     		ldr	r3, .L15+4
+ 276 003a 5A89     		ldrh	r2, [r3, #10]
+ 277              		.loc 1 85 36
+ 278 003c 0B4B     		ldr	r3, .L15+8
+ 279 003e 5A81     		strh	r2, [r3, #10]	@ movhi
+  86:Core/Src/application.c ****             dados_solo.nitrogenio  = sensorDeSolo.nitrogen;
+ 280              		.loc 1 86 50
+ 281 0040 094B     		ldr	r3, .L15+4
+ 282 0042 9A89     		ldrh	r2, [r3, #12]
+ 283              		.loc 1 86 36
+ 284 0044 094B     		ldr	r3, .L15+8
+ 285 0046 9A81     		strh	r2, [r3, #12]	@ movhi
+  87:Core/Src/application.c ****             dados_solo.fosforo     = sensorDeSolo.phosphorus;
+ 286              		.loc 1 87 50
+ 287 0048 074B     		ldr	r3, .L15+4
+ 288 004a DA89     		ldrh	r2, [r3, #14]
+ 289              		.loc 1 87 36
+ 290 004c 074B     		ldr	r3, .L15+8
+ 291 004e DA81     		strh	r2, [r3, #14]	@ movhi
+  88:Core/Src/application.c ****             dados_solo.potassio    = sensorDeSolo.potassium;
+ 292              		.loc 1 88 50
+ 293 0050 054B     		ldr	r3, .L15+4
+ 294 0052 1A8A     		ldrh	r2, [r3, #16]
+ 295              		.loc 1 88 36
+ 296 0054 054B     		ldr	r3, .L15+8
+ 297 0056 1A82     		strh	r2, [r3, #16]	@ movhi
+ 298              	.L13:
+  89:Core/Src/application.c ****         } else {
+  90:Core/Src/application.c ****             // Falha na leitura
+  91:Core/Src/application.c ****         }
+  92:Core/Src/application.c ****         
+  93:Core/Src/application.c ****         osDelay(5000); 
+ 299              		.loc 1 93 9
+ 300 0058 41F28830 		movw	r0, #5000
+ 301 005c FFF7FEFF 		bl	osDelay
+  81:Core/Src/application.c ****             dados_solo.umidade     = sensorDeSolo.humidity;
+ 302              		.loc 1 81 12
+ 303 0060 D6E7     		b	.L14
+ 304              	.L16:
+ 305 0062 00BF     		.align	2
+ 306              	.L15:
+ 307 0064 00000000 		.word	huart2
+ARM GAS  /tmp/ccTmCGHN.s 			page 8
 
 
-  76:Core/Src/application.c ****             htim3.Instance->CCR2 = (htim3.Instance->ARR*(pwmData.compressor_power))/100;
- 387              		.loc 1 76 42
- 388 004a 0A4B     		ldr	r3, .L14+12
- 389 004c 1B68     		ldr	r3, [r3]
- 390              		.loc 1 76 51
- 391 004e DB6A     		ldr	r3, [r3, #44]
- 392              		.loc 1 76 65
- 393 0050 BA89     		ldrh	r2, [r7, #12]
- 394              		.loc 1 76 56
- 395 0052 03FB02F2 		mul	r2, r3, r2
- 396              		.loc 1 76 18
- 397 0056 074B     		ldr	r3, .L14+12
- 398 0058 1B68     		ldr	r3, [r3]
- 399              		.loc 1 76 84
- 400 005a 0549     		ldr	r1, .L14+8
- 401 005c A1FB0212 		umull	r1, r2, r1, r2
- 402 0060 5209     		lsrs	r2, r2, #5
- 403              		.loc 1 76 34
- 404 0062 9A63     		str	r2, [r3, #56]
-  70:Core/Src/application.c ****         memcpy(&pwmData,data,sizeof(AC_CONTROLLER_OBJ_t));
- 405              		.loc 1 70 18
- 406 0064 D0E7     		b	.L13
- 407              	.L15:
- 408 0066 00BF     		.align	2
- 409              	.L14:
- 410 0068 00000000 		.word	setPWMDutyQueueHandle
- 411 006c 00000000 		.word	htim1
- 412 0070 1F85EB51 		.word	1374389535
- 413 0074 00000000 		.word	htim3
- 414              		.cfi_endproc
- 415              	.LFE227:
- 417              		.global	sensorDeSolo
- 418              		.section	.bss.sensorDeSolo,"aw",%nobits
- 419              		.align	2
- 422              	sensorDeSolo:
- 423 0000 00000000 		.space	52
- 423      00000000 
- 423      00000000 
- 423      00000000 
- 423      00000000 
- 424              		.section	.text.SoilSensorTaskCode,"ax",%progbits
- 425              		.align	1
- 426              		.global	SoilSensorTaskCode
- 427              		.syntax unified
- 428              		.thumb
- 429              		.thumb_func
- 431              	SoilSensorTaskCode:
- 432              	.LFB228:
-  77:Core/Src/application.c ****         }
-  78:Core/Src/application.c ****     }
-  79:Core/Src/application.c **** }
-  80:Core/Src/application.c **** 
-  81:Core/Src/application.c **** 
-  82:Core/Src/application.c **** extern UART_HandleTypeDef huart2;
-  83:Core/Src/application.c **** SoilSensor sensorDeSolo;
-  84:Core/Src/application.c **** void SoilSensorTaskCode(void const * argument) {
- 433              		.loc 1 84 48
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 10
+ 308 0068 00000000 		.word	sensorDeSolo
+ 309 006c 00000000 		.word	dados_solo
+ 310              		.cfi_endproc
+ 311              	.LFE227:
+ 313              		.section	.text.AppSendTaskCode,"ax",%progbits
+ 314              		.align	1
+ 315              		.global	AppSendTaskCode
+ 316              		.syntax unified
+ 317              		.thumb
+ 318              		.thumb_func
+ 320              	AppSendTaskCode:
+ 321              	.LFB228:
+  94:Core/Src/application.c ****     }
+  95:Core/Src/application.c **** }
+  96:Core/Src/application.c **** 
+  97:Core/Src/application.c **** void AppSendTaskCode(void *argument)
+  98:Core/Src/application.c **** {
+ 322              		.loc 1 98 1
+ 323              		.cfi_startproc
+ 324              		@ args = 0, pretend = 0, frame = 32
+ 325              		@ frame_needed = 1, uses_anonymous_args = 0
+ 326 0000 80B5     		push	{r7, lr}
+ 327              	.LCFI16:
+ 328              		.cfi_def_cfa_offset 8
+ 329              		.cfi_offset 7, -8
+ 330              		.cfi_offset 14, -4
+ 331 0002 88B0     		sub	sp, sp, #32
+ 332              	.LCFI17:
+ 333              		.cfi_def_cfa_offset 40
+ 334 0004 00AF     		add	r7, sp, #0
+ 335              	.LCFI18:
+ 336              		.cfi_def_cfa_register 7
+ 337 0006 7860     		str	r0, [r7, #4]
+  99:Core/Src/application.c ****     /* USER CODE BEGIN 5 */
+ 100:Core/Src/application.c ****     /* Infinite loop */
+ 101:Core/Src/application.c ****     LoRaSoilData_t dados;
+ 102:Core/Src/application.c ****     osDelay(5000);
+ 338              		.loc 1 102 5
+ 339 0008 41F28830 		movw	r0, #5000
+ 340 000c FFF7FEFF 		bl	osDelay
+ 103:Core/Src/application.c ****     dados.seq_no = 0;
+ 341              		.loc 1 103 18
+ 342 0010 0023     		movs	r3, #0
+ 343 0012 FB60     		str	r3, [r7, #12]
+ 344              	.L18:
+ 104:Core/Src/application.c **** 
+ 105:Core/Src/application.c ****     while (1){
+ 106:Core/Src/application.c ****         dados.umidade = dados_solo.umidade;
+ 345              		.loc 1 106 35
+ 346 0014 134B     		ldr	r3, .L19
+ 347 0016 B3F90430 		ldrsh	r3, [r3, #4]
+ 348              		.loc 1 106 23
+ 349 001a 3B82     		strh	r3, [r7, #16]	@ movhi
+ 107:Core/Src/application.c ****         dados.temperatura = dados_solo.temperatura;
+ 350              		.loc 1 107 39
+ 351 001c 114B     		ldr	r3, .L19
+ 352 001e B3F90630 		ldrsh	r3, [r3, #6]
+ARM GAS  /tmp/ccTmCGHN.s 			page 9
 
 
- 434              		.cfi_startproc
- 435              		@ args = 0, pretend = 0, frame = 16
- 436              		@ frame_needed = 1, uses_anonymous_args = 0
- 437 0000 80B5     		push	{r7, lr}
- 438              	.LCFI16:
- 439              		.cfi_def_cfa_offset 8
- 440              		.cfi_offset 7, -8
- 441              		.cfi_offset 14, -4
- 442 0002 84B0     		sub	sp, sp, #16
- 443              	.LCFI17:
- 444              		.cfi_def_cfa_offset 24
- 445 0004 00AF     		add	r7, sp, #0
- 446              	.LCFI18:
- 447              		.cfi_def_cfa_register 7
- 448 0006 7860     		str	r0, [r7, #4]
-  85:Core/Src/application.c ****     if (!SoilSensor_Init(&sensorDeSolo, &huart2)) {
- 449              		.loc 1 85 10
- 450 0008 0A49     		ldr	r1, .L19
- 451 000a 0B48     		ldr	r0, .L19+4
- 452 000c FFF7FEFF 		bl	SoilSensor_Init
- 453              	.L18:
-  86:Core/Src/application.c ****         // Erro: Sensor não encontrado ou cabo solto
-  87:Core/Src/application.c ****     }
-  88:Core/Src/application.c **** 
-  89:Core/Src/application.c ****     while (1) 
-  90:Core/Src/application.c ****     {
-  91:Core/Src/application.c ****         if (SoilSensor_ReadAllVariables(&sensorDeSolo)) {
- 454              		.loc 1 91 13
- 455 0010 0948     		ldr	r0, .L19+4
- 456 0012 FFF7FEFF 		bl	SoilSensor_ReadAllVariables
- 457 0016 0346     		mov	r3, r0
- 458              		.loc 1 91 12
- 459 0018 002B     		cmp	r3, #0
- 460 001a 05D0     		beq	.L17
- 461              	.LBB2:
-  92:Core/Src/application.c ****             float ph_atual = sensorDeSolo.ph;
- 462              		.loc 1 92 19
- 463 001c 064B     		ldr	r3, .L19+4
- 464 001e 1B69     		ldr	r3, [r3, #16]	@ float
- 465 0020 FB60     		str	r3, [r7, #12]	@ float
-  93:Core/Src/application.c ****             float umidade = sensorDeSolo.humidity;
- 466              		.loc 1 93 19
- 467 0022 054B     		ldr	r3, .L19+4
- 468 0024 9B68     		ldr	r3, [r3, #8]	@ float
- 469 0026 BB60     		str	r3, [r7, #8]	@ float
- 470              	.L17:
- 471              	.LBE2:
-  94:Core/Src/application.c ****         }
-  95:Core/Src/application.c ****         
-  96:Core/Src/application.c ****         osDelay(5000); 
- 472              		.loc 1 96 9
- 473 0028 41F28830 		movw	r0, #5000
- 474 002c FFF7FEFF 		bl	osDelay
-  91:Core/Src/application.c ****             float ph_atual = sensorDeSolo.ph;
- 475              		.loc 1 91 12
- 476 0030 EEE7     		b	.L18
- 477              	.L20:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 11
+ 353              		.loc 1 107 27
+ 354 0022 7B82     		strh	r3, [r7, #18]	@ movhi
+ 108:Core/Src/application.c ****         dados.ec = dados_solo.ec;
+ 355              		.loc 1 108 30
+ 356 0024 0F4B     		ldr	r3, .L19
+ 357 0026 1B89     		ldrh	r3, [r3, #8]
+ 358              		.loc 1 108 18
+ 359 0028 BB82     		strh	r3, [r7, #20]	@ movhi
+ 109:Core/Src/application.c ****         dados.ph = dados_solo.ph;
+ 360              		.loc 1 109 30
+ 361 002a 0E4B     		ldr	r3, .L19
+ 362 002c 5B89     		ldrh	r3, [r3, #10]
+ 363              		.loc 1 109 18
+ 364 002e FB82     		strh	r3, [r7, #22]	@ movhi
+ 110:Core/Src/application.c ****         dados.nitrogenio = dados_solo.nitrogenio;
+ 365              		.loc 1 110 38
+ 366 0030 0C4B     		ldr	r3, .L19
+ 367 0032 9B89     		ldrh	r3, [r3, #12]
+ 368              		.loc 1 110 26
+ 369 0034 3B83     		strh	r3, [r7, #24]	@ movhi
+ 111:Core/Src/application.c ****         dados.fosforo = dados_solo.fosforo;
+ 370              		.loc 1 111 35
+ 371 0036 0B4B     		ldr	r3, .L19
+ 372 0038 DB89     		ldrh	r3, [r3, #14]
+ 373              		.loc 1 111 23
+ 374 003a 7B83     		strh	r3, [r7, #26]	@ movhi
+ 112:Core/Src/application.c ****         dados.potassio = dados_solo.potassio;
+ 375              		.loc 1 112 36
+ 376 003c 094B     		ldr	r3, .L19
+ 377 003e 1B8A     		ldrh	r3, [r3, #16]
+ 378              		.loc 1 112 24
+ 379 0040 BB83     		strh	r3, [r7, #28]	@ movhi
+ 113:Core/Src/application.c ****         dados.seq_no++;
+ 380              		.loc 1 113 14
+ 381 0042 FB68     		ldr	r3, [r7, #12]
+ 382              		.loc 1 113 21
+ 383 0044 0133     		adds	r3, r3, #1
+ 384 0046 FB60     		str	r3, [r7, #12]
+ 114:Core/Src/application.c ****         LoRaSendBNow(2, (uint8_t *)&dados, sizeof(LoRaSoilData_t));
+ 385              		.loc 1 114 9
+ 386 0048 07F10C03 		add	r3, r7, #12
+ 387 004c 1222     		movs	r2, #18
+ 388 004e 1946     		mov	r1, r3
+ 389 0050 0220     		movs	r0, #2
+ 390 0052 FFF7FEFF 		bl	LoRaSendBNow
+ 115:Core/Src/application.c ****         osDelay(30000);
+ 391              		.loc 1 115 9 discriminator 1
+ 392 0056 47F23050 		movw	r0, #30000
+ 393 005a FFF7FEFF 		bl	osDelay
+ 106:Core/Src/application.c ****         dados.temperatura = dados_solo.temperatura;
+ 394              		.loc 1 106 23
+ 395 005e 00BF     		nop
+ 396 0060 D8E7     		b	.L18
+ 397              	.L20:
+ 398 0062 00BF     		.align	2
+ 399              	.L19:
+ 400 0064 00000000 		.word	dados_solo
+ARM GAS  /tmp/ccTmCGHN.s 			page 10
 
 
- 478 0032 00BF     		.align	2
- 479              	.L19:
- 480 0034 00000000 		.word	huart2
- 481 0038 00000000 		.word	sensorDeSolo
- 482              		.cfi_endproc
- 483              	.LFE228:
- 485              		.text
- 486              	.Letext0:
- 487              		.file 2 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\lib\\gcc\\a
- 488              		.file 3 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 489              		.file 4 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 490              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
- 491              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 492              		.file 7 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 493              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 494              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 495              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
- 496              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
- 497              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
- 498              		.file 13 "Core/Inc/SoilSensor.h"
- 499              		.file 14 "Core/Inc/main.h"
- 500              		.file 15 "Core/Inc/radioenge_modem.h"
- 501              		.file 16 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-e
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s 			page 12
+ 401              		.cfi_endproc
+ 402              	.LFE228:
+ 404              		.text
+ 405              	.Letext0:
+ 406              		.file 2 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h"
+ 407              		.file 3 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h"
+ 408              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 409              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 410              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 411              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 412              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 413              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 414              		.file 10 "Core/Inc/SoilSensor.h"
+ 415              		.file 11 "Core/Inc/main.h"
+ 416              		.file 12 "Core/Inc/radioenge_modem.h"
+ARM GAS  /tmp/ccTmCGHN.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 application.c
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:20     .text.LoRaWAN_RxEventCallback:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:26     .text.LoRaWAN_RxEventCallback:00000000 LoRaWAN_RxEventCallback
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:68     .text.LoRaWAN_RxEventCallback:00000028 $d
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:73     .text.PeriodicSendTimerCallback:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:79     .text.PeriodicSendTimerCallback:00000000 PeriodicSendTimerCallback
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:116    .text.PeriodicSendTimerCallback:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:124    .text.AppSendTaskCode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:130    .text.AppSendTaskCode:00000000 AppSendTaskCode
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:308    .text.AppSendTaskCode:00000178 $d
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:325    .text.setPWMDutyTaskCode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:331    .text.setPWMDutyTaskCode:00000000 setPWMDutyTaskCode
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:410    .text.setPWMDutyTaskCode:00000068 $d
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:422    .bss.sensorDeSolo:00000000 sensorDeSolo
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:419    .bss.sensorDeSolo:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:425    .text.SoilSensorTaskCode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:431    .text.SoilSensorTaskCode:00000000 SoilSensorTaskCode
-C:\Users\bruno\AppData\Local\Temp\ccelg8HB.s:480    .text.SoilSensorTaskCode:00000034 $d
+     /tmp/ccTmCGHN.s:21     .bss.dados_solo:00000000 $d
+     /tmp/ccTmCGHN.s:24     .bss.dados_solo:00000000 dados_solo
+     /tmp/ccTmCGHN.s:27     .text.LoRaWAN_RxEventCallback:00000000 $t
+     /tmp/ccTmCGHN.s:33     .text.LoRaWAN_RxEventCallback:00000000 LoRaWAN_RxEventCallback
+     /tmp/ccTmCGHN.s:74     .text.LoRaWAN_RxEventCallback:00000024 $d
+     /tmp/ccTmCGHN.s:79     .text.PeriodicSendTimerCallback:00000000 $t
+     /tmp/ccTmCGHN.s:85     .text.PeriodicSendTimerCallback:00000000 PeriodicSendTimerCallback
+     /tmp/ccTmCGHN.s:122    .text.PeriodicSendTimerCallback:0000001c $d
+     /tmp/ccTmCGHN.s:127    .text.setPWMDutyTaskCode:00000000 $t
+     /tmp/ccTmCGHN.s:133    .text.setPWMDutyTaskCode:00000000 setPWMDutyTaskCode
+     /tmp/ccTmCGHN.s:206    .text.setPWMDutyTaskCode:0000005c $d
+     /tmp/ccTmCGHN.s:217    .bss.sensorDeSolo:00000000 sensorDeSolo
+     /tmp/ccTmCGHN.s:214    .bss.sensorDeSolo:00000000 $d
+     /tmp/ccTmCGHN.s:220    .text.SoilSensorTaskCode:00000000 $t
+     /tmp/ccTmCGHN.s:226    .text.SoilSensorTaskCode:00000000 SoilSensorTaskCode
+     /tmp/ccTmCGHN.s:307    .text.SoilSensorTaskCode:00000064 $d
+     /tmp/ccTmCGHN.s:314    .text.AppSendTaskCode:00000000 $t
+     /tmp/ccTmCGHN.s:320    .text.AppSendTaskCode:00000000 AppSendTaskCode
+     /tmp/ccTmCGHN.s:400    .text.AppSendTaskCode:00000064 $d
 
 UNDEFINED SYMBOLS
 osMessageQueuePut
 setPWMDutyQueueHandle
 osThreadFlagsSet
 AppSendTaskHandle
-__aeabi_f2d
-__aeabi_d2f
-__aeabi_dsub
-osTimerStart
-LoRaWaitDutyCycle
-HAL_ADC_Start
-HAL_ADC_PollForConversion
-HAL_ADC_GetValue
-log
-LoRaSendBNow
-osThreadFlagsClear
-osThreadFlagsWait
-PeriodicSendTimerHandle
-hadc1
 osMessageQueueGet
 htim1
 htim3
@@ -673,3 +593,4 @@ SoilSensor_Init
 SoilSensor_ReadAllVariables
 osDelay
 huart2
+LoRaSendBNow

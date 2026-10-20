@@ -36,17 +36,12 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-typedef struct
-{
-    uint32_t seq_no;
-    int32_t temp_oCx100;
-} __attribute__((packed)) TEMPERATURE_OBJ_t;
 
 typedef struct
 {
-    uint16_t compressor_power;
+    uint16_t irrigacao;
     uint8_t warning_status;
-} __attribute__((packed)) AC_CONTROLLER_OBJ_t;
+} __attribute__((packed)) PUMP_CONTROLLER_OBJ_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

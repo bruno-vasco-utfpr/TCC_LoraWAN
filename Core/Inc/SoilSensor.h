@@ -7,20 +7,19 @@
 
 typedef struct {
     UART_HandleTypeDef *huart;
-    float temperature;
-    float humidity;
-    float ec;
-    float ph;
-    float nitrogen;
-    float phosphorus;
-    float potassium;
-
+    int16_t temperature;  
+    int16_t humidity;     
+    uint16_t ec;      
+    uint16_t ph;    
+    uint16_t nitrogen;  
+    uint16_t phosphorus; 
+    uint16_t potassium;    
     uint8_t isFresh;
     uint8_t buffer[19];
 } SoilSensor;
 
 bool SoilSensor_Init(SoilSensor *sensor, UART_HandleTypeDef *huart);
-
-bool SoilSensor_ReadAllVariables(SoilSensor *sensor);
+// Retorno alterado para bool para checar se a leitura teve sucesso
+bool SoilSensor_ReadAllVariables(SoilSensor *sensor); 
 
 #endif

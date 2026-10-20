@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -12,14 +9,21 @@
             "type": "cortex-debug",
             "servertype": "openocd",
             "device": "STM32F411CE",
+            "gdbPath": "/opt/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
+            "openOCDPath": "/usr/bin/openocd",
+            "openOCDLaunchCommands": [ "adapter speed 1000" ],
             "configFiles": [
                 "interface/stlink.cfg",
                 "target/stm32f4x.cfg"
             ],
             "rtos": "FreeRTOS",
             "svdFile": "STM32F411.svd",
-            "preLaunchTask": "build", // The name of the task defined above
-            "runToMain": true
+            "preLaunchTask": "build",
+            
+            // ESSAS LINHAS SÃO A CHAVE DO SUCESSO
+            "gdbTarget": "localhost:3333",
+            "showDevDebugOutput": "raw",
+            "runToEntryPoint": "main"
         }
     ]
-}
+}   

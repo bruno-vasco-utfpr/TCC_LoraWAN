@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
+ARM GAS  /tmp/cc5Eqks9.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.HAL_PCDEx_SetTxFiFo,"ax",%progbits
-  20              		.align	1
-  21              		.global	HAL_PCDEx_SetTxFiFo
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	HAL_PCDEx_SetTxFiFo:
-  27              	.LFB220:
-  28              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c"
+  19              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c"
+  20              		.section	.text.HAL_PCDEx_SetTxFiFo,"ax",%progbits
+  21              		.align	1
+  22              		.global	HAL_PCDEx_SetTxFiFo
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	HAL_PCDEx_SetTxFiFo:
+  28              	.LFB220:
    1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** /**
    2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   ******************************************************************************
    3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   * @file    stm32f4xx_hal_pcd_ex.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   */
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** /** @defgroup PCDEx PCDEx
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 2
+ARM GAS  /tmp/cc5Eqks9.s 			page 2
 
 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   * @brief PCD Extended HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
   42              	.LCFI2:
   43              		.cfi_def_cfa_register 7
   44 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 3
+ARM GAS  /tmp/cc5Eqks9.s 			page 3
 
 
   45 0008 0B46     		mov	r3, r1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
   77 0032 9B6A     		ldr	r3, [r3, #40]
   78              		.loc 1 93 55
   79 0034 1B0C     		lsrs	r3, r3, #16
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 4
+ARM GAS  /tmp/cc5Eqks9.s 			page 4
 
 
   80              		.loc 1 93 15
@@ -194,18 +194,18 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
   89              	.L5:
   95:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****     {
   96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****       Tx_Offset += (hpcd->Instance->DIEPTXF[i] >> 16);
-  90              		.loc 1 96 25 discriminator 3
+  90              		.loc 1 96 25
   91 0042 7B68     		ldr	r3, [r7, #4]
   92 0044 1A68     		ldr	r2, [r3]
-  93              		.loc 1 96 44 discriminator 3
+  93              		.loc 1 96 44
   94 0046 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
   95 0048 4033     		adds	r3, r3, #64
   96 004a 9B00     		lsls	r3, r3, #2
   97 004c 1344     		add	r3, r3, r2
   98 004e 5B68     		ldr	r3, [r3, #4]
-  99              		.loc 1 96 48 discriminator 3
+  99              		.loc 1 96 48
  100 0050 1B0C     		lsrs	r3, r3, #16
- 101              		.loc 1 96 17 discriminator 3
+ 101              		.loc 1 96 17
  102 0052 BA68     		ldr	r2, [r7, #8]
  103 0054 1344     		add	r3, r3, r2
  104 0056 BB60     		str	r3, [r7, #8]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  123 006c 7B68     		ldr	r3, [r7, #4]
  124 006e 1968     		ldr	r1, [r3]
  125              		.loc 1 100 34
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 5
+ARM GAS  /tmp/cc5Eqks9.s 			page 5
 
 
  126 0070 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  169              		@ link register save eliminated.
  170 0000 80B4     		push	{r7}
  171              	.LCFI6:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 6
+ARM GAS  /tmp/cc5Eqks9.s 			page 6
 
 
  172              		.cfi_def_cfa_offset 4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  125:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   */
  126:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** HAL_StatusTypeDef HAL_PCDEx_ActivateLPM(PCD_HandleTypeDef *hpcd)
  127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** {
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 7
+ARM GAS  /tmp/cc5Eqks9.s 			page 7
 
 
  128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   USB_OTG_GlobalTypeDef *USBx = hpcd->Instance;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  182:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   }
  183:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** 
  184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   /* Primary detection: checks if connected to Standard Downstream Port
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 8
+ARM GAS  /tmp/cc5Eqks9.s 			page 8
 
 
  185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   (without charging capability) */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  239:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** #endif /* USE_HAL_PCD_REGISTER_CALLBACKS */
  240:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   }
  241:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   else
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 9
+ARM GAS  /tmp/cc5Eqks9.s 			page 9
 
 
  242:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   {
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  296:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** 
  297:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** /**
  298:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   * @brief  Send LPM message to user layer callback.
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 10
+ARM GAS  /tmp/cc5Eqks9.s 			page 10
 
 
  299:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c ****   * @param  hpcd PCD handle
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  259              	HAL_PCDEx_BCD_Callback:
  260              	.LFB223:
  313:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** 
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 11
+ARM GAS  /tmp/cc5Eqks9.s 			page 11
 
 
  314:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c **** /**
@@ -653,27 +653,26 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 1
  294              	.LFE223:
  296              		.text
  297              	.Letext0:
- 298              		.file 2 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 299              		.file 3 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 300              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 301              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 302              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 12
+ 298              		.file 2 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h"
+ 299              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 300              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 301              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ 302              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+ARM GAS  /tmp/cc5Eqks9.s 			page 12
 
 
- 303              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s 			page 13
+ARM GAS  /tmp/cc5Eqks9.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal_pcd_ex.c
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:20     .text.HAL_PCDEx_SetTxFiFo:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:26     .text.HAL_PCDEx_SetTxFiFo:00000000 HAL_PCDEx_SetTxFiFo
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:157    .text.HAL_PCDEx_SetRxFiFo:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:163    .text.HAL_PCDEx_SetRxFiFo:00000000 HAL_PCDEx_SetRxFiFo
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:209    .text.HAL_PCDEx_LPM_Callback:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:215    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:253    .text.HAL_PCDEx_BCD_Callback:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccGkj4ky.s:259    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
+     /tmp/cc5Eqks9.s:21     .text.HAL_PCDEx_SetTxFiFo:00000000 $t
+     /tmp/cc5Eqks9.s:27     .text.HAL_PCDEx_SetTxFiFo:00000000 HAL_PCDEx_SetTxFiFo
+     /tmp/cc5Eqks9.s:157    .text.HAL_PCDEx_SetRxFiFo:00000000 $t
+     /tmp/cc5Eqks9.s:163    .text.HAL_PCDEx_SetRxFiFo:00000000 HAL_PCDEx_SetRxFiFo
+     /tmp/cc5Eqks9.s:209    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+     /tmp/cc5Eqks9.s:215    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+     /tmp/cc5Eqks9.s:253    .text.HAL_PCDEx_BCD_Callback:00000000 $t
+     /tmp/cc5Eqks9.s:259    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
 
 NO UNDEFINED SYMBOLS

@@ -25,8 +25,8 @@ extern osTimerId_t DutyCycleTimerHandle;
 #define SUB_BAND (3)
 char gConfigCmds[NUMBER_OF_STRINGS][STRING_LENGTH + 1] = {
     "AT+CFM=0\r\n",
-    "AT+APPKEY=00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF\r\n",
-    "AT+APPEUI=00:00:00:00:00:00:00:00\r\n",
+    "AT+APPKEY=95:cc:0a:fd:46:dd:dc:85:30:34:b9:08:a0:8a:49:57\r\n",
+    "AT+APPEUI=13:13:13:13:13:13:13:13\r\n",
 #if SUB_BAND == 3
     "AT+CHMASK=0000:00FF:0000:0000:0004:0000\r\n", //sub-band 3, channels 16 to 23 and 66
 #else

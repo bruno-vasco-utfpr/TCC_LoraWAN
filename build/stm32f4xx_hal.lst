@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
+ARM GAS  /tmp/cce3NeiB.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,29 +19,29 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.global	uwTick
-  20              		.section	.bss.uwTick,"aw",%nobits
-  21              		.align	2
-  24              	uwTick:
-  25 0000 00000000 		.space	4
-  26              		.global	uwTickPrio
-  27              		.section	.data.uwTickPrio,"aw"
-  28              		.align	2
-  31              	uwTickPrio:
-  32 0000 10000000 		.word	16
-  33              		.global	uwTickFreq
-  34              		.section	.data.uwTickFreq,"aw"
-  37              	uwTickFreq:
-  38 0000 01       		.byte	1
-  39              		.section	.text.HAL_Init,"ax",%progbits
-  40              		.align	1
-  41              		.global	HAL_Init
-  42              		.syntax unified
-  43              		.thumb
-  44              		.thumb_func
-  46              	HAL_Init:
-  47              	.LFB220:
-  48              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+  19              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+  20              		.global	uwTick
+  21              		.section	.bss.uwTick,"aw",%nobits
+  22              		.align	2
+  25              	uwTick:
+  26 0000 00000000 		.space	4
+  27              		.global	uwTickPrio
+  28              		.section	.data.uwTickPrio,"aw"
+  29              		.align	2
+  32              	uwTickPrio:
+  33 0000 10000000 		.word	16
+  34              		.global	uwTickFreq
+  35              		.section	.data.uwTickFreq,"aw"
+  38              	uwTickFreq:
+  39 0000 01       		.byte	1
+  40              		.section	.text.HAL_Init,"ax",%progbits
+  41              		.align	1
+  42              		.global	HAL_Init
+  43              		.syntax unified
+  44              		.thumb
+  45              		.thumb_func
+  47              	HAL_Init:
+  48              	.LFB220:
    1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
    2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   ******************************************************************************
    3:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @file    stm32f4xx_hal.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
   14:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * This software is licensed under terms that can be found in the LICENSE file
   15:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * in the root directory of this software component.
   16:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 2
+ARM GAS  /tmp/cce3NeiB.s 			page 2
 
 
   17:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
   71:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** #define UFB_MODE_BIT_NUMBER       SYSCFG_MEMRMP_UFB_MODE_Pos
   72:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** #define UFB_MODE_BB               (uint32_t)(PERIPH_BB_BASE + (MEMRMP_OFFSET * 32U) + (UFB_MODE_BIT
   73:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 3
+ARM GAS  /tmp/cce3NeiB.s 			page 3
 
 
   74:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /* ---  CMPCR Register ---*/ 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  128:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****              when clock is configured, by HAL_RCC_ClockConfig(). 
  129:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****         (++) Source of time base is configured  to generate interrupts at regular 
  130:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****              time intervals. Care must be taken if HAL_Delay() is called from a 
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 4
+ARM GAS  /tmp/cce3NeiB.s 			page 4
 
 
  131:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****              peripheral ISR process, the Tick interrupt line must have higher priority 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
   68 0010 0B4B     		ldr	r3, .L3
   69 0012 1B68     		ldr	r3, [r3]
   70 0014 0A4A     		ldr	r2, .L3
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 5
+ARM GAS  /tmp/cce3NeiB.s 			page 5
 
 
   71 0016 43F48063 		orr	r3, r3, #1024
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  185:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  186:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  This function de-Initializes common part of the HAL and stops the systick.
  187:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   *         This function is optional.   
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 6
+ARM GAS  /tmp/cce3NeiB.s 			page 6
 
 
  188:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @retval HAL status
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  147 002c 5A61     		str	r2, [r3, #20]
  203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   __HAL_RCC_AHB2_RELEASE_RESET();
  148              		.loc 1 203 3
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 7
+ARM GAS  /tmp/cce3NeiB.s 			page 7
 
 
  149 002e 074B     		ldr	r3, .L7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  188              		@ args = 0, pretend = 0, frame = 0
  189              		@ frame_needed = 1, uses_anonymous_args = 0
  190              		@ link register save eliminated.
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 8
+ARM GAS  /tmp/cce3NeiB.s 			page 8
 
 
  191 0000 80B4     		push	{r7}
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
  233              		.loc 1 235 1
  234 0004 00BF     		nop
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 9
+ARM GAS  /tmp/cce3NeiB.s 			page 9
 
 
  235 0006 BD46     		mov	sp, r7
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  255:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   /* Configure the SysTick to have interrupt in 1ms time basis*/
  256:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   if (HAL_SYSTICK_Config(SystemCoreClock / (1000U / uwTickFreq)) > 0U)
  272              		.loc 1 256 7
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 10
+ARM GAS  /tmp/cce3NeiB.s 			page 10
 
 
  273 0008 124B     		ldr	r3, .L16
@@ -554,7 +554,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  283 001e 1846     		mov	r0, r3
  284 0020 FFF7FEFF 		bl	HAL_SYSTICK_Config
  285 0024 0346     		mov	r3, r0
- 286              		.loc 1 256 6
+ 286              		.loc 1 256 6 discriminator 1
  287 0026 002B     		cmp	r3, #0
  288 0028 01D0     		beq	.L12
  257:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   }
  310              		.loc 1 269 12
  311 004a 0123     		movs	r3, #1
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 11
+ARM GAS  /tmp/cce3NeiB.s 			page 11
 
 
  312              	.L13:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  301:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  302:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  303:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 12
+ARM GAS  /tmp/cce3NeiB.s 			page 12
 
 
  304:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief This function is called to increment  a global variable "uwTick"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  384              		.syntax unified
  385              		.thumb
  386              		.thumb_func
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 13
+ARM GAS  /tmp/cce3NeiB.s 			page 13
 
 
  388              	HAL_GetTick:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  328:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  329:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief This function returns a tick priority.
  330:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @retval tick priority
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 14
+ARM GAS  /tmp/cce3NeiB.s 			page 14
 
 
  331:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  476              		@ args = 0, pretend = 0, frame = 16
  477              		@ frame_needed = 1, uses_anonymous_args = 0
  478 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 15
+ARM GAS  /tmp/cce3NeiB.s 			page 15
 
 
  479              	.LCFI29:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  516              		.loc 1 359 8
  517 0032 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  518 0034 002B     		cmp	r3, #0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 16
+ARM GAS  /tmp/cce3NeiB.s 			page 16
 
 
  519 0036 02D0     		beq	.L30
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  559 0000 80B4     		push	{r7}
  560              	.LCFI34:
  561              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 17
+ARM GAS  /tmp/cce3NeiB.s 			page 17
 
 
  562              		.cfi_offset 7, -4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  602              		.cfi_def_cfa_offset 8
  603              		.cfi_offset 7, -8
  604              		.cfi_offset 14, -4
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 18
+ARM GAS  /tmp/cce3NeiB.s 			page 18
 
 
  605 0002 84B0     		sub	sp, sp, #16
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  646 003a 00BF     		nop
  647 003c 1037     		adds	r7, r7, #16
  648              	.LCFI41:
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 19
+ARM GAS  /tmp/cce3NeiB.s 			page 19
 
 
  649              		.cfi_def_cfa_offset 8
@@ -1128,41 +1128,42 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  682              		.cfi_def_cfa_register 7
  418:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   /* Disable SysTick Interrupt */
  419:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
- 683              		.loc 1 419 17
+ 683              		.loc 1 419 10
  684 0004 054B     		ldr	r3, .L45
  685 0006 1B68     		ldr	r3, [r3]
  686 0008 044A     		ldr	r2, .L45
- 687 000a 23F00203 		bic	r3, r3, #2
- 688 000e 1360     		str	r3, [r2]
+ 687              		.loc 1 419 17
+ 688 000a 23F00203 		bic	r3, r3, #2
+ 689 000e 1360     		str	r3, [r2]
  420:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 689              		.loc 1 420 1
- 690 0010 00BF     		nop
- 691 0012 BD46     		mov	sp, r7
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 20
+ 690              		.loc 1 420 1
+ 691 0010 00BF     		nop
+ARM GAS  /tmp/cce3NeiB.s 			page 20
 
 
- 692              	.LCFI45:
- 693              		.cfi_def_cfa_register 13
- 694              		@ sp needed
- 695 0014 5DF8047B 		ldr	r7, [sp], #4
- 696              	.LCFI46:
- 697              		.cfi_restore 7
- 698              		.cfi_def_cfa_offset 0
- 699 0018 7047     		bx	lr
- 700              	.L46:
- 701 001a 00BF     		.align	2
- 702              	.L45:
- 703 001c 10E000E0 		.word	-536813552
- 704              		.cfi_endproc
- 705              	.LFE231:
- 707              		.section	.text.HAL_ResumeTick,"ax",%progbits
- 708              		.align	1
- 709              		.weak	HAL_ResumeTick
- 710              		.syntax unified
- 711              		.thumb
- 712              		.thumb_func
- 714              	HAL_ResumeTick:
- 715              	.LFB232:
+ 692 0012 BD46     		mov	sp, r7
+ 693              	.LCFI45:
+ 694              		.cfi_def_cfa_register 13
+ 695              		@ sp needed
+ 696 0014 5DF8047B 		ldr	r7, [sp], #4
+ 697              	.LCFI46:
+ 698              		.cfi_restore 7
+ 699              		.cfi_def_cfa_offset 0
+ 700 0018 7047     		bx	lr
+ 701              	.L46:
+ 702 001a 00BF     		.align	2
+ 703              	.L45:
+ 704 001c 10E000E0 		.word	-536813552
+ 705              		.cfi_endproc
+ 706              	.LFE231:
+ 708              		.section	.text.HAL_ResumeTick,"ax",%progbits
+ 709              		.align	1
+ 710              		.weak	HAL_ResumeTick
+ 711              		.syntax unified
+ 712              		.thumb
+ 713              		.thumb_func
+ 715              	HAL_ResumeTick:
+ 716              	.LFB232:
  421:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  422:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  423:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief Resume Tick increment.
@@ -1176,55 +1177,56 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  431:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  432:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** __weak void HAL_ResumeTick(void)
  433:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 716              		.loc 1 433 1
- 717              		.cfi_startproc
- 718              		@ args = 0, pretend = 0, frame = 0
- 719              		@ frame_needed = 1, uses_anonymous_args = 0
- 720              		@ link register save eliminated.
- 721 0000 80B4     		push	{r7}
- 722              	.LCFI47:
- 723              		.cfi_def_cfa_offset 4
- 724              		.cfi_offset 7, -4
- 725 0002 00AF     		add	r7, sp, #0
- 726              	.LCFI48:
- 727              		.cfi_def_cfa_register 7
+ 717              		.loc 1 433 1
+ 718              		.cfi_startproc
+ 719              		@ args = 0, pretend = 0, frame = 0
+ 720              		@ frame_needed = 1, uses_anonymous_args = 0
+ 721              		@ link register save eliminated.
+ 722 0000 80B4     		push	{r7}
+ 723              	.LCFI47:
+ 724              		.cfi_def_cfa_offset 4
+ 725              		.cfi_offset 7, -4
+ 726 0002 00AF     		add	r7, sp, #0
+ 727              	.LCFI48:
+ 728              		.cfi_def_cfa_register 7
  434:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   /* Enable SysTick Interrupt */
  435:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   SysTick->CTRL  |= SysTick_CTRL_TICKINT_Msk;
- 728              		.loc 1 435 18
- 729 0004 054B     		ldr	r3, .L48
- 730 0006 1B68     		ldr	r3, [r3]
- 731 0008 044A     		ldr	r2, .L48
- 732 000a 43F00203 		orr	r3, r3, #2
- 733 000e 1360     		str	r3, [r2]
+ 729              		.loc 1 435 10
+ 730 0004 054B     		ldr	r3, .L48
+ 731 0006 1B68     		ldr	r3, [r3]
+ 732 0008 044A     		ldr	r2, .L48
+ 733              		.loc 1 435 18
+ 734 000a 43F00203 		orr	r3, r3, #2
+ 735 000e 1360     		str	r3, [r2]
+ARM GAS  /tmp/cce3NeiB.s 			page 21
+
+
  436:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 734              		.loc 1 436 1
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 21
-
-
- 735 0010 00BF     		nop
- 736 0012 BD46     		mov	sp, r7
- 737              	.LCFI49:
- 738              		.cfi_def_cfa_register 13
- 739              		@ sp needed
- 740 0014 5DF8047B 		ldr	r7, [sp], #4
- 741              	.LCFI50:
- 742              		.cfi_restore 7
- 743              		.cfi_def_cfa_offset 0
- 744 0018 7047     		bx	lr
- 745              	.L49:
- 746 001a 00BF     		.align	2
- 747              	.L48:
- 748 001c 10E000E0 		.word	-536813552
- 749              		.cfi_endproc
- 750              	.LFE232:
- 752              		.section	.text.HAL_GetHalVersion,"ax",%progbits
- 753              		.align	1
- 754              		.global	HAL_GetHalVersion
- 755              		.syntax unified
- 756              		.thumb
- 757              		.thumb_func
- 759              	HAL_GetHalVersion:
- 760              	.LFB233:
+ 736              		.loc 1 436 1
+ 737 0010 00BF     		nop
+ 738 0012 BD46     		mov	sp, r7
+ 739              	.LCFI49:
+ 740              		.cfi_def_cfa_register 13
+ 741              		@ sp needed
+ 742 0014 5DF8047B 		ldr	r7, [sp], #4
+ 743              	.LCFI50:
+ 744              		.cfi_restore 7
+ 745              		.cfi_def_cfa_offset 0
+ 746 0018 7047     		bx	lr
+ 747              	.L49:
+ 748 001a 00BF     		.align	2
+ 749              	.L48:
+ 750 001c 10E000E0 		.word	-536813552
+ 751              		.cfi_endproc
+ 752              	.LFE232:
+ 754              		.section	.text.HAL_GetHalVersion,"ax",%progbits
+ 755              		.align	1
+ 756              		.global	HAL_GetHalVersion
+ 757              		.syntax unified
+ 758              		.thumb
+ 759              		.thumb_func
+ 761              	HAL_GetHalVersion:
+ 762              	.LFB233:
  437:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  438:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  439:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns the HAL revision
@@ -1232,50 +1234,50 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  441:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetHalVersion(void)
  443:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 761              		.loc 1 443 1
- 762              		.cfi_startproc
- 763              		@ args = 0, pretend = 0, frame = 0
- 764              		@ frame_needed = 1, uses_anonymous_args = 0
- 765              		@ link register save eliminated.
- 766 0000 80B4     		push	{r7}
- 767              	.LCFI51:
- 768              		.cfi_def_cfa_offset 4
- 769              		.cfi_offset 7, -4
- 770 0002 00AF     		add	r7, sp, #0
- 771              	.LCFI52:
- 772              		.cfi_def_cfa_register 7
+ 763              		.loc 1 443 1
+ 764              		.cfi_startproc
+ 765              		@ args = 0, pretend = 0, frame = 0
+ 766              		@ frame_needed = 1, uses_anonymous_args = 0
+ 767              		@ link register save eliminated.
+ 768 0000 80B4     		push	{r7}
+ 769              	.LCFI51:
+ 770              		.cfi_def_cfa_offset 4
+ 771              		.cfi_offset 7, -4
+ 772 0002 00AF     		add	r7, sp, #0
+ 773              	.LCFI52:
+ 774              		.cfi_def_cfa_register 7
  444:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return __STM32F4xx_HAL_VERSION;
- 773              		.loc 1 444 10
- 774 0004 024B     		ldr	r3, .L52
+ 775              		.loc 1 444 10
+ 776 0004 024B     		ldr	r3, .L52
  445:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 775              		.loc 1 445 1
- 776 0006 1846     		mov	r0, r3
- 777 0008 BD46     		mov	sp, r7
- 778              	.LCFI53:
- 779              		.cfi_def_cfa_register 13
- 780              		@ sp needed
- 781 000a 5DF8047B 		ldr	r7, [sp], #4
- 782              	.LCFI54:
- 783              		.cfi_restore 7
- 784              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 22
+ 777              		.loc 1 445 1
+ 778 0006 1846     		mov	r0, r3
+ 779 0008 BD46     		mov	sp, r7
+ 780              	.LCFI53:
+ 781              		.cfi_def_cfa_register 13
+ 782              		@ sp needed
+ 783 000a 5DF8047B 		ldr	r7, [sp], #4
+ 784              	.LCFI54:
+ARM GAS  /tmp/cce3NeiB.s 			page 22
 
 
- 785 000e 7047     		bx	lr
- 786              	.L53:
- 787              		.align	2
- 788              	.L52:
- 789 0010 00040801 		.word	17302528
- 790              		.cfi_endproc
- 791              	.LFE233:
- 793              		.section	.text.HAL_GetREVID,"ax",%progbits
- 794              		.align	1
- 795              		.global	HAL_GetREVID
- 796              		.syntax unified
- 797              		.thumb
- 798              		.thumb_func
- 800              	HAL_GetREVID:
- 801              	.LFB234:
+ 785              		.cfi_restore 7
+ 786              		.cfi_def_cfa_offset 0
+ 787 000e 7047     		bx	lr
+ 788              	.L53:
+ 789              		.align	2
+ 790              	.L52:
+ 791 0010 00040801 		.word	17302528
+ 792              		.cfi_endproc
+ 793              	.LFE233:
+ 795              		.section	.text.HAL_GetREVID,"ax",%progbits
+ 796              		.align	1
+ 797              		.global	HAL_GetREVID
+ 798              		.syntax unified
+ 799              		.thumb
+ 800              		.thumb_func
+ 802              	HAL_GetREVID:
+ 803              	.LFB234:
  446:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  447:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  448:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns the device revision identifier.
@@ -1283,53 +1285,53 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  450:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  451:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetREVID(void)
  452:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 802              		.loc 1 452 1
- 803              		.cfi_startproc
- 804              		@ args = 0, pretend = 0, frame = 0
- 805              		@ frame_needed = 1, uses_anonymous_args = 0
- 806              		@ link register save eliminated.
- 807 0000 80B4     		push	{r7}
- 808              	.LCFI55:
- 809              		.cfi_def_cfa_offset 4
- 810              		.cfi_offset 7, -4
- 811 0002 00AF     		add	r7, sp, #0
- 812              	.LCFI56:
- 813              		.cfi_def_cfa_register 7
+ 804              		.loc 1 452 1
+ 805              		.cfi_startproc
+ 806              		@ args = 0, pretend = 0, frame = 0
+ 807              		@ frame_needed = 1, uses_anonymous_args = 0
+ 808              		@ link register save eliminated.
+ 809 0000 80B4     		push	{r7}
+ 810              	.LCFI55:
+ 811              		.cfi_def_cfa_offset 4
+ 812              		.cfi_offset 7, -4
+ 813 0002 00AF     		add	r7, sp, #0
+ 814              	.LCFI56:
+ 815              		.cfi_def_cfa_register 7
  453:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return((DBGMCU->IDCODE) >> 16U);
- 814              		.loc 1 453 17
- 815 0004 034B     		ldr	r3, .L56
- 816 0006 1B68     		ldr	r3, [r3]
- 817              		.loc 1 453 27
- 818 0008 1B0C     		lsrs	r3, r3, #16
+ 816              		.loc 1 453 17
+ 817 0004 034B     		ldr	r3, .L56
+ 818 0006 1B68     		ldr	r3, [r3]
+ 819              		.loc 1 453 27
+ 820 0008 1B0C     		lsrs	r3, r3, #16
  454:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 819              		.loc 1 454 1
- 820 000a 1846     		mov	r0, r3
- 821 000c BD46     		mov	sp, r7
- 822              	.LCFI57:
- 823              		.cfi_def_cfa_register 13
- 824              		@ sp needed
- 825 000e 5DF8047B 		ldr	r7, [sp], #4
- 826              	.LCFI58:
- 827              		.cfi_restore 7
- 828              		.cfi_def_cfa_offset 0
- 829 0012 7047     		bx	lr
- 830              	.L57:
- 831              		.align	2
- 832              	.L56:
- 833 0014 002004E0 		.word	-536600576
- 834              		.cfi_endproc
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 23
+ 821              		.loc 1 454 1
+ 822 000a 1846     		mov	r0, r3
+ 823 000c BD46     		mov	sp, r7
+ 824              	.LCFI57:
+ 825              		.cfi_def_cfa_register 13
+ 826              		@ sp needed
+ 827 000e 5DF8047B 		ldr	r7, [sp], #4
+ 828              	.LCFI58:
+ 829              		.cfi_restore 7
+ 830              		.cfi_def_cfa_offset 0
+ 831 0012 7047     		bx	lr
+ 832              	.L57:
+ 833              		.align	2
+ 834              	.L56:
+ARM GAS  /tmp/cce3NeiB.s 			page 23
 
 
- 835              	.LFE234:
- 837              		.section	.text.HAL_GetDEVID,"ax",%progbits
- 838              		.align	1
- 839              		.global	HAL_GetDEVID
- 840              		.syntax unified
- 841              		.thumb
- 842              		.thumb_func
- 844              	HAL_GetDEVID:
- 845              	.LFB235:
+ 835 0014 002004E0 		.word	-536600576
+ 836              		.cfi_endproc
+ 837              	.LFE234:
+ 839              		.section	.text.HAL_GetDEVID,"ax",%progbits
+ 840              		.align	1
+ 841              		.global	HAL_GetDEVID
+ 842              		.syntax unified
+ 843              		.thumb
+ 844              		.thumb_func
+ 846              	HAL_GetDEVID:
+ 847              	.LFB235:
  455:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  456:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  457:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns the device identifier.
@@ -1337,53 +1339,53 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  459:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  460:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetDEVID(void)
  461:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 846              		.loc 1 461 1
- 847              		.cfi_startproc
- 848              		@ args = 0, pretend = 0, frame = 0
- 849              		@ frame_needed = 1, uses_anonymous_args = 0
- 850              		@ link register save eliminated.
- 851 0000 80B4     		push	{r7}
- 852              	.LCFI59:
- 853              		.cfi_def_cfa_offset 4
- 854              		.cfi_offset 7, -4
- 855 0002 00AF     		add	r7, sp, #0
- 856              	.LCFI60:
- 857              		.cfi_def_cfa_register 7
+ 848              		.loc 1 461 1
+ 849              		.cfi_startproc
+ 850              		@ args = 0, pretend = 0, frame = 0
+ 851              		@ frame_needed = 1, uses_anonymous_args = 0
+ 852              		@ link register save eliminated.
+ 853 0000 80B4     		push	{r7}
+ 854              	.LCFI59:
+ 855              		.cfi_def_cfa_offset 4
+ 856              		.cfi_offset 7, -4
+ 857 0002 00AF     		add	r7, sp, #0
+ 858              	.LCFI60:
+ 859              		.cfi_def_cfa_register 7
  462:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return((DBGMCU->IDCODE) & IDCODE_DEVID_MASK);
- 858              		.loc 1 462 17
- 859 0004 044B     		ldr	r3, .L60
- 860 0006 1B68     		ldr	r3, [r3]
- 861              		.loc 1 462 27
- 862 0008 C3F30B03 		ubfx	r3, r3, #0, #12
+ 860              		.loc 1 462 17
+ 861 0004 044B     		ldr	r3, .L60
+ 862 0006 1B68     		ldr	r3, [r3]
+ 863              		.loc 1 462 27
+ 864 0008 C3F30B03 		ubfx	r3, r3, #0, #12
  463:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 863              		.loc 1 463 1
- 864 000c 1846     		mov	r0, r3
- 865 000e BD46     		mov	sp, r7
- 866              	.LCFI61:
- 867              		.cfi_def_cfa_register 13
- 868              		@ sp needed
- 869 0010 5DF8047B 		ldr	r7, [sp], #4
- 870              	.LCFI62:
- 871              		.cfi_restore 7
- 872              		.cfi_def_cfa_offset 0
- 873 0014 7047     		bx	lr
- 874              	.L61:
- 875 0016 00BF     		.align	2
- 876              	.L60:
- 877 0018 002004E0 		.word	-536600576
- 878              		.cfi_endproc
- 879              	.LFE235:
- 881              		.section	.text.HAL_DBGMCU_EnableDBGSleepMode,"ax",%progbits
- 882              		.align	1
- 883              		.global	HAL_DBGMCU_EnableDBGSleepMode
- 884              		.syntax unified
- 885              		.thumb
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 24
+ 865              		.loc 1 463 1
+ 866 000c 1846     		mov	r0, r3
+ 867 000e BD46     		mov	sp, r7
+ 868              	.LCFI61:
+ 869              		.cfi_def_cfa_register 13
+ 870              		@ sp needed
+ 871 0010 5DF8047B 		ldr	r7, [sp], #4
+ 872              	.LCFI62:
+ 873              		.cfi_restore 7
+ 874              		.cfi_def_cfa_offset 0
+ 875 0014 7047     		bx	lr
+ 876              	.L61:
+ 877 0016 00BF     		.align	2
+ 878              	.L60:
+ 879 0018 002004E0 		.word	-536600576
+ 880              		.cfi_endproc
+ 881              	.LFE235:
+ 883              		.section	.text.HAL_DBGMCU_EnableDBGSleepMode,"ax",%progbits
+ 884              		.align	1
+ 885              		.global	HAL_DBGMCU_EnableDBGSleepMode
+ARM GAS  /tmp/cce3NeiB.s 			page 24
 
 
- 886              		.thumb_func
- 888              	HAL_DBGMCU_EnableDBGSleepMode:
- 889              	.LFB236:
+ 886              		.syntax unified
+ 887              		.thumb
+ 888              		.thumb_func
+ 890              	HAL_DBGMCU_EnableDBGSleepMode:
+ 891              	.LFB236:
  464:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  465:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  466:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Enable the Debug Module during SLEEP mode
@@ -1391,161 +1393,161 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  468:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  469:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_EnableDBGSleepMode(void)
  470:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 890              		.loc 1 470 1
- 891              		.cfi_startproc
- 892              		@ args = 0, pretend = 0, frame = 0
- 893              		@ frame_needed = 1, uses_anonymous_args = 0
- 894              		@ link register save eliminated.
- 895 0000 80B4     		push	{r7}
- 896              	.LCFI63:
- 897              		.cfi_def_cfa_offset 4
- 898              		.cfi_offset 7, -4
- 899 0002 00AF     		add	r7, sp, #0
- 900              	.LCFI64:
- 901              		.cfi_def_cfa_register 7
+ 892              		.loc 1 470 1
+ 893              		.cfi_startproc
+ 894              		@ args = 0, pretend = 0, frame = 0
+ 895              		@ frame_needed = 1, uses_anonymous_args = 0
+ 896              		@ link register save eliminated.
+ 897 0000 80B4     		push	{r7}
+ 898              	.LCFI63:
+ 899              		.cfi_def_cfa_offset 4
+ 900              		.cfi_offset 7, -4
+ 901 0002 00AF     		add	r7, sp, #0
+ 902              	.LCFI64:
+ 903              		.cfi_def_cfa_register 7
  471:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   SET_BIT(DBGMCU->CR, DBGMCU_CR_DBG_SLEEP);
- 902              		.loc 1 471 3
- 903 0004 054B     		ldr	r3, .L63
- 904 0006 5B68     		ldr	r3, [r3, #4]
- 905 0008 044A     		ldr	r2, .L63
- 906 000a 43F00103 		orr	r3, r3, #1
- 907 000e 5360     		str	r3, [r2, #4]
+ 904              		.loc 1 471 3
+ 905 0004 054B     		ldr	r3, .L63
+ 906 0006 5B68     		ldr	r3, [r3, #4]
+ 907 0008 044A     		ldr	r2, .L63
+ 908 000a 43F00103 		orr	r3, r3, #1
+ 909 000e 5360     		str	r3, [r2, #4]
  472:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 908              		.loc 1 472 1
- 909 0010 00BF     		nop
- 910 0012 BD46     		mov	sp, r7
- 911              	.LCFI65:
- 912              		.cfi_def_cfa_register 13
- 913              		@ sp needed
- 914 0014 5DF8047B 		ldr	r7, [sp], #4
- 915              	.LCFI66:
- 916              		.cfi_restore 7
- 917              		.cfi_def_cfa_offset 0
- 918 0018 7047     		bx	lr
- 919              	.L64:
- 920 001a 00BF     		.align	2
- 921              	.L63:
- 922 001c 002004E0 		.word	-536600576
- 923              		.cfi_endproc
- 924              	.LFE236:
- 926              		.section	.text.HAL_DBGMCU_DisableDBGSleepMode,"ax",%progbits
- 927              		.align	1
- 928              		.global	HAL_DBGMCU_DisableDBGSleepMode
- 929              		.syntax unified
- 930              		.thumb
- 931              		.thumb_func
- 933              	HAL_DBGMCU_DisableDBGSleepMode:
- 934              	.LFB237:
+ 910              		.loc 1 472 1
+ 911 0010 00BF     		nop
+ 912 0012 BD46     		mov	sp, r7
+ 913              	.LCFI65:
+ 914              		.cfi_def_cfa_register 13
+ 915              		@ sp needed
+ 916 0014 5DF8047B 		ldr	r7, [sp], #4
+ 917              	.LCFI66:
+ 918              		.cfi_restore 7
+ 919              		.cfi_def_cfa_offset 0
+ 920 0018 7047     		bx	lr
+ 921              	.L64:
+ 922 001a 00BF     		.align	2
+ 923              	.L63:
+ 924 001c 002004E0 		.word	-536600576
+ 925              		.cfi_endproc
+ 926              	.LFE236:
+ 928              		.section	.text.HAL_DBGMCU_DisableDBGSleepMode,"ax",%progbits
+ 929              		.align	1
+ 930              		.global	HAL_DBGMCU_DisableDBGSleepMode
+ 931              		.syntax unified
+ 932              		.thumb
+ 933              		.thumb_func
+ 935              	HAL_DBGMCU_DisableDBGSleepMode:
+ 936              	.LFB237:
+ARM GAS  /tmp/cce3NeiB.s 			page 25
+
+
  473:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  474:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 25
-
-
  475:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Disable the Debug Module during SLEEP mode
  476:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @retval None
  477:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  478:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_DisableDBGSleepMode(void)
  479:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 935              		.loc 1 479 1
- 936              		.cfi_startproc
- 937              		@ args = 0, pretend = 0, frame = 0
- 938              		@ frame_needed = 1, uses_anonymous_args = 0
- 939              		@ link register save eliminated.
- 940 0000 80B4     		push	{r7}
- 941              	.LCFI67:
- 942              		.cfi_def_cfa_offset 4
- 943              		.cfi_offset 7, -4
- 944 0002 00AF     		add	r7, sp, #0
- 945              	.LCFI68:
- 946              		.cfi_def_cfa_register 7
+ 937              		.loc 1 479 1
+ 938              		.cfi_startproc
+ 939              		@ args = 0, pretend = 0, frame = 0
+ 940              		@ frame_needed = 1, uses_anonymous_args = 0
+ 941              		@ link register save eliminated.
+ 942 0000 80B4     		push	{r7}
+ 943              	.LCFI67:
+ 944              		.cfi_def_cfa_offset 4
+ 945              		.cfi_offset 7, -4
+ 946 0002 00AF     		add	r7, sp, #0
+ 947              	.LCFI68:
+ 948              		.cfi_def_cfa_register 7
  480:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   CLEAR_BIT(DBGMCU->CR, DBGMCU_CR_DBG_SLEEP);
- 947              		.loc 1 480 3
- 948 0004 054B     		ldr	r3, .L66
- 949 0006 5B68     		ldr	r3, [r3, #4]
- 950 0008 044A     		ldr	r2, .L66
- 951 000a 23F00103 		bic	r3, r3, #1
- 952 000e 5360     		str	r3, [r2, #4]
+ 949              		.loc 1 480 3
+ 950 0004 054B     		ldr	r3, .L66
+ 951 0006 5B68     		ldr	r3, [r3, #4]
+ 952 0008 044A     		ldr	r2, .L66
+ 953 000a 23F00103 		bic	r3, r3, #1
+ 954 000e 5360     		str	r3, [r2, #4]
  481:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 953              		.loc 1 481 1
- 954 0010 00BF     		nop
- 955 0012 BD46     		mov	sp, r7
- 956              	.LCFI69:
- 957              		.cfi_def_cfa_register 13
- 958              		@ sp needed
- 959 0014 5DF8047B 		ldr	r7, [sp], #4
- 960              	.LCFI70:
- 961              		.cfi_restore 7
- 962              		.cfi_def_cfa_offset 0
- 963 0018 7047     		bx	lr
- 964              	.L67:
- 965 001a 00BF     		.align	2
- 966              	.L66:
- 967 001c 002004E0 		.word	-536600576
- 968              		.cfi_endproc
- 969              	.LFE237:
- 971              		.section	.text.HAL_DBGMCU_EnableDBGStopMode,"ax",%progbits
- 972              		.align	1
- 973              		.global	HAL_DBGMCU_EnableDBGStopMode
- 974              		.syntax unified
- 975              		.thumb
- 976              		.thumb_func
- 978              	HAL_DBGMCU_EnableDBGStopMode:
- 979              	.LFB238:
+ 955              		.loc 1 481 1
+ 956 0010 00BF     		nop
+ 957 0012 BD46     		mov	sp, r7
+ 958              	.LCFI69:
+ 959              		.cfi_def_cfa_register 13
+ 960              		@ sp needed
+ 961 0014 5DF8047B 		ldr	r7, [sp], #4
+ 962              	.LCFI70:
+ 963              		.cfi_restore 7
+ 964              		.cfi_def_cfa_offset 0
+ 965 0018 7047     		bx	lr
+ 966              	.L67:
+ 967 001a 00BF     		.align	2
+ 968              	.L66:
+ 969 001c 002004E0 		.word	-536600576
+ 970              		.cfi_endproc
+ 971              	.LFE237:
+ 973              		.section	.text.HAL_DBGMCU_EnableDBGStopMode,"ax",%progbits
+ 974              		.align	1
+ 975              		.global	HAL_DBGMCU_EnableDBGStopMode
+ 976              		.syntax unified
+ 977              		.thumb
+ 978              		.thumb_func
+ 980              	HAL_DBGMCU_EnableDBGStopMode:
+ 981              	.LFB238:
  482:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  483:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  484:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Enable the Debug Module during STOP mode
  485:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @retval None
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
+ARM GAS  /tmp/cce3NeiB.s 			page 26
+
+
  487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_EnableDBGStopMode(void)
  488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 26
-
-
- 980              		.loc 1 488 1
- 981              		.cfi_startproc
- 982              		@ args = 0, pretend = 0, frame = 0
- 983              		@ frame_needed = 1, uses_anonymous_args = 0
- 984              		@ link register save eliminated.
- 985 0000 80B4     		push	{r7}
- 986              	.LCFI71:
- 987              		.cfi_def_cfa_offset 4
- 988              		.cfi_offset 7, -4
- 989 0002 00AF     		add	r7, sp, #0
- 990              	.LCFI72:
- 991              		.cfi_def_cfa_register 7
+ 982              		.loc 1 488 1
+ 983              		.cfi_startproc
+ 984              		@ args = 0, pretend = 0, frame = 0
+ 985              		@ frame_needed = 1, uses_anonymous_args = 0
+ 986              		@ link register save eliminated.
+ 987 0000 80B4     		push	{r7}
+ 988              	.LCFI71:
+ 989              		.cfi_def_cfa_offset 4
+ 990              		.cfi_offset 7, -4
+ 991 0002 00AF     		add	r7, sp, #0
+ 992              	.LCFI72:
+ 993              		.cfi_def_cfa_register 7
  489:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   SET_BIT(DBGMCU->CR, DBGMCU_CR_DBG_STOP);
- 992              		.loc 1 489 3
- 993 0004 054B     		ldr	r3, .L69
- 994 0006 5B68     		ldr	r3, [r3, #4]
- 995 0008 044A     		ldr	r2, .L69
- 996 000a 43F00203 		orr	r3, r3, #2
- 997 000e 5360     		str	r3, [r2, #4]
+ 994              		.loc 1 489 3
+ 995 0004 054B     		ldr	r3, .L69
+ 996 0006 5B68     		ldr	r3, [r3, #4]
+ 997 0008 044A     		ldr	r2, .L69
+ 998 000a 43F00203 		orr	r3, r3, #2
+ 999 000e 5360     		str	r3, [r2, #4]
  490:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 998              		.loc 1 490 1
- 999 0010 00BF     		nop
- 1000 0012 BD46     		mov	sp, r7
- 1001              	.LCFI73:
- 1002              		.cfi_def_cfa_register 13
- 1003              		@ sp needed
- 1004 0014 5DF8047B 		ldr	r7, [sp], #4
- 1005              	.LCFI74:
- 1006              		.cfi_restore 7
- 1007              		.cfi_def_cfa_offset 0
- 1008 0018 7047     		bx	lr
- 1009              	.L70:
- 1010 001a 00BF     		.align	2
- 1011              	.L69:
- 1012 001c 002004E0 		.word	-536600576
- 1013              		.cfi_endproc
- 1014              	.LFE238:
- 1016              		.section	.text.HAL_DBGMCU_DisableDBGStopMode,"ax",%progbits
- 1017              		.align	1
- 1018              		.global	HAL_DBGMCU_DisableDBGStopMode
- 1019              		.syntax unified
- 1020              		.thumb
- 1021              		.thumb_func
- 1023              	HAL_DBGMCU_DisableDBGStopMode:
- 1024              	.LFB239:
+ 1000              		.loc 1 490 1
+ 1001 0010 00BF     		nop
+ 1002 0012 BD46     		mov	sp, r7
+ 1003              	.LCFI73:
+ 1004              		.cfi_def_cfa_register 13
+ 1005              		@ sp needed
+ 1006 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1007              	.LCFI74:
+ 1008              		.cfi_restore 7
+ 1009              		.cfi_def_cfa_offset 0
+ 1010 0018 7047     		bx	lr
+ 1011              	.L70:
+ 1012 001a 00BF     		.align	2
+ 1013              	.L69:
+ 1014 001c 002004E0 		.word	-536600576
+ 1015              		.cfi_endproc
+ 1016              	.LFE238:
+ 1018              		.section	.text.HAL_DBGMCU_DisableDBGStopMode,"ax",%progbits
+ 1019              		.align	1
+ 1020              		.global	HAL_DBGMCU_DisableDBGStopMode
+ 1021              		.syntax unified
+ 1022              		.thumb
+ 1023              		.thumb_func
+ 1025              	HAL_DBGMCU_DisableDBGStopMode:
+ 1026              	.LFB239:
  491:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  492:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  493:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Disable the Debug Module during STOP mode
@@ -1553,54 +1555,54 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  495:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  496:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_DisableDBGStopMode(void)
  497:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1025              		.loc 1 497 1
- 1026              		.cfi_startproc
- 1027              		@ args = 0, pretend = 0, frame = 0
- 1028              		@ frame_needed = 1, uses_anonymous_args = 0
- 1029              		@ link register save eliminated.
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 27
+ 1027              		.loc 1 497 1
+ 1028              		.cfi_startproc
+ 1029              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cce3NeiB.s 			page 27
 
 
- 1030 0000 80B4     		push	{r7}
- 1031              	.LCFI75:
- 1032              		.cfi_def_cfa_offset 4
- 1033              		.cfi_offset 7, -4
- 1034 0002 00AF     		add	r7, sp, #0
- 1035              	.LCFI76:
- 1036              		.cfi_def_cfa_register 7
+ 1030              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1031              		@ link register save eliminated.
+ 1032 0000 80B4     		push	{r7}
+ 1033              	.LCFI75:
+ 1034              		.cfi_def_cfa_offset 4
+ 1035              		.cfi_offset 7, -4
+ 1036 0002 00AF     		add	r7, sp, #0
+ 1037              	.LCFI76:
+ 1038              		.cfi_def_cfa_register 7
  498:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   CLEAR_BIT(DBGMCU->CR, DBGMCU_CR_DBG_STOP);
- 1037              		.loc 1 498 3
- 1038 0004 054B     		ldr	r3, .L72
- 1039 0006 5B68     		ldr	r3, [r3, #4]
- 1040 0008 044A     		ldr	r2, .L72
- 1041 000a 23F00203 		bic	r3, r3, #2
- 1042 000e 5360     		str	r3, [r2, #4]
+ 1039              		.loc 1 498 3
+ 1040 0004 054B     		ldr	r3, .L72
+ 1041 0006 5B68     		ldr	r3, [r3, #4]
+ 1042 0008 044A     		ldr	r2, .L72
+ 1043 000a 23F00203 		bic	r3, r3, #2
+ 1044 000e 5360     		str	r3, [r2, #4]
  499:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1043              		.loc 1 499 1
- 1044 0010 00BF     		nop
- 1045 0012 BD46     		mov	sp, r7
- 1046              	.LCFI77:
- 1047              		.cfi_def_cfa_register 13
- 1048              		@ sp needed
- 1049 0014 5DF8047B 		ldr	r7, [sp], #4
- 1050              	.LCFI78:
- 1051              		.cfi_restore 7
- 1052              		.cfi_def_cfa_offset 0
- 1053 0018 7047     		bx	lr
- 1054              	.L73:
- 1055 001a 00BF     		.align	2
- 1056              	.L72:
- 1057 001c 002004E0 		.word	-536600576
- 1058              		.cfi_endproc
- 1059              	.LFE239:
- 1061              		.section	.text.HAL_DBGMCU_EnableDBGStandbyMode,"ax",%progbits
- 1062              		.align	1
- 1063              		.global	HAL_DBGMCU_EnableDBGStandbyMode
- 1064              		.syntax unified
- 1065              		.thumb
- 1066              		.thumb_func
- 1068              	HAL_DBGMCU_EnableDBGStandbyMode:
- 1069              	.LFB240:
+ 1045              		.loc 1 499 1
+ 1046 0010 00BF     		nop
+ 1047 0012 BD46     		mov	sp, r7
+ 1048              	.LCFI77:
+ 1049              		.cfi_def_cfa_register 13
+ 1050              		@ sp needed
+ 1051 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1052              	.LCFI78:
+ 1053              		.cfi_restore 7
+ 1054              		.cfi_def_cfa_offset 0
+ 1055 0018 7047     		bx	lr
+ 1056              	.L73:
+ 1057 001a 00BF     		.align	2
+ 1058              	.L72:
+ 1059 001c 002004E0 		.word	-536600576
+ 1060              		.cfi_endproc
+ 1061              	.LFE239:
+ 1063              		.section	.text.HAL_DBGMCU_EnableDBGStandbyMode,"ax",%progbits
+ 1064              		.align	1
+ 1065              		.global	HAL_DBGMCU_EnableDBGStandbyMode
+ 1066              		.syntax unified
+ 1067              		.thumb
+ 1068              		.thumb_func
+ 1070              	HAL_DBGMCU_EnableDBGStandbyMode:
+ 1071              	.LFB240:
  500:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  501:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  502:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Enable the Debug Module during STANDBY mode
@@ -1608,54 +1610,54 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  505:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_EnableDBGStandbyMode(void)
  506:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1070              		.loc 1 506 1
- 1071              		.cfi_startproc
- 1072              		@ args = 0, pretend = 0, frame = 0
- 1073              		@ frame_needed = 1, uses_anonymous_args = 0
- 1074              		@ link register save eliminated.
- 1075 0000 80B4     		push	{r7}
- 1076              	.LCFI79:
- 1077              		.cfi_def_cfa_offset 4
- 1078              		.cfi_offset 7, -4
- 1079 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 28
+ 1072              		.loc 1 506 1
+ 1073              		.cfi_startproc
+ 1074              		@ args = 0, pretend = 0, frame = 0
+ 1075              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1076              		@ link register save eliminated.
+ 1077 0000 80B4     		push	{r7}
+ 1078              	.LCFI79:
+ 1079              		.cfi_def_cfa_offset 4
+ARM GAS  /tmp/cce3NeiB.s 			page 28
 
 
- 1080              	.LCFI80:
- 1081              		.cfi_def_cfa_register 7
+ 1080              		.cfi_offset 7, -4
+ 1081 0002 00AF     		add	r7, sp, #0
+ 1082              	.LCFI80:
+ 1083              		.cfi_def_cfa_register 7
  507:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   SET_BIT(DBGMCU->CR, DBGMCU_CR_DBG_STANDBY);
- 1082              		.loc 1 507 3
- 1083 0004 054B     		ldr	r3, .L75
- 1084 0006 5B68     		ldr	r3, [r3, #4]
- 1085 0008 044A     		ldr	r2, .L75
- 1086 000a 43F00403 		orr	r3, r3, #4
- 1087 000e 5360     		str	r3, [r2, #4]
+ 1084              		.loc 1 507 3
+ 1085 0004 054B     		ldr	r3, .L75
+ 1086 0006 5B68     		ldr	r3, [r3, #4]
+ 1087 0008 044A     		ldr	r2, .L75
+ 1088 000a 43F00403 		orr	r3, r3, #4
+ 1089 000e 5360     		str	r3, [r2, #4]
  508:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1088              		.loc 1 508 1
- 1089 0010 00BF     		nop
- 1090 0012 BD46     		mov	sp, r7
- 1091              	.LCFI81:
- 1092              		.cfi_def_cfa_register 13
- 1093              		@ sp needed
- 1094 0014 5DF8047B 		ldr	r7, [sp], #4
- 1095              	.LCFI82:
- 1096              		.cfi_restore 7
- 1097              		.cfi_def_cfa_offset 0
- 1098 0018 7047     		bx	lr
- 1099              	.L76:
- 1100 001a 00BF     		.align	2
- 1101              	.L75:
- 1102 001c 002004E0 		.word	-536600576
- 1103              		.cfi_endproc
- 1104              	.LFE240:
- 1106              		.section	.text.HAL_DBGMCU_DisableDBGStandbyMode,"ax",%progbits
- 1107              		.align	1
- 1108              		.global	HAL_DBGMCU_DisableDBGStandbyMode
- 1109              		.syntax unified
- 1110              		.thumb
- 1111              		.thumb_func
- 1113              	HAL_DBGMCU_DisableDBGStandbyMode:
- 1114              	.LFB241:
+ 1090              		.loc 1 508 1
+ 1091 0010 00BF     		nop
+ 1092 0012 BD46     		mov	sp, r7
+ 1093              	.LCFI81:
+ 1094              		.cfi_def_cfa_register 13
+ 1095              		@ sp needed
+ 1096 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1097              	.LCFI82:
+ 1098              		.cfi_restore 7
+ 1099              		.cfi_def_cfa_offset 0
+ 1100 0018 7047     		bx	lr
+ 1101              	.L76:
+ 1102 001a 00BF     		.align	2
+ 1103              	.L75:
+ 1104 001c 002004E0 		.word	-536600576
+ 1105              		.cfi_endproc
+ 1106              	.LFE240:
+ 1108              		.section	.text.HAL_DBGMCU_DisableDBGStandbyMode,"ax",%progbits
+ 1109              		.align	1
+ 1110              		.global	HAL_DBGMCU_DisableDBGStandbyMode
+ 1111              		.syntax unified
+ 1112              		.thumb
+ 1113              		.thumb_func
+ 1115              	HAL_DBGMCU_DisableDBGStandbyMode:
+ 1116              	.LFB241:
  509:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  510:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  511:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Disable the Debug Module during STANDBY mode
@@ -1663,54 +1665,54 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  513:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  514:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DBGMCU_DisableDBGStandbyMode(void)
  515:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1115              		.loc 1 515 1
- 1116              		.cfi_startproc
- 1117              		@ args = 0, pretend = 0, frame = 0
- 1118              		@ frame_needed = 1, uses_anonymous_args = 0
- 1119              		@ link register save eliminated.
- 1120 0000 80B4     		push	{r7}
- 1121              	.LCFI83:
- 1122              		.cfi_def_cfa_offset 4
- 1123              		.cfi_offset 7, -4
- 1124 0002 00AF     		add	r7, sp, #0
- 1125              	.LCFI84:
- 1126              		.cfi_def_cfa_register 7
+ 1117              		.loc 1 515 1
+ 1118              		.cfi_startproc
+ 1119              		@ args = 0, pretend = 0, frame = 0
+ 1120              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1121              		@ link register save eliminated.
+ 1122 0000 80B4     		push	{r7}
+ 1123              	.LCFI83:
+ 1124              		.cfi_def_cfa_offset 4
+ 1125              		.cfi_offset 7, -4
+ 1126 0002 00AF     		add	r7, sp, #0
+ 1127              	.LCFI84:
+ 1128              		.cfi_def_cfa_register 7
  516:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   CLEAR_BIT(DBGMCU->CR, DBGMCU_CR_DBG_STANDBY);
- 1127              		.loc 1 516 3
- 1128 0004 054B     		ldr	r3, .L78
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 29
+ARM GAS  /tmp/cce3NeiB.s 			page 29
 
 
- 1129 0006 5B68     		ldr	r3, [r3, #4]
- 1130 0008 044A     		ldr	r2, .L78
- 1131 000a 23F00403 		bic	r3, r3, #4
- 1132 000e 5360     		str	r3, [r2, #4]
+ 1129              		.loc 1 516 3
+ 1130 0004 054B     		ldr	r3, .L78
+ 1131 0006 5B68     		ldr	r3, [r3, #4]
+ 1132 0008 044A     		ldr	r2, .L78
+ 1133 000a 23F00403 		bic	r3, r3, #4
+ 1134 000e 5360     		str	r3, [r2, #4]
  517:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1133              		.loc 1 517 1
- 1134 0010 00BF     		nop
- 1135 0012 BD46     		mov	sp, r7
- 1136              	.LCFI85:
- 1137              		.cfi_def_cfa_register 13
- 1138              		@ sp needed
- 1139 0014 5DF8047B 		ldr	r7, [sp], #4
- 1140              	.LCFI86:
- 1141              		.cfi_restore 7
- 1142              		.cfi_def_cfa_offset 0
- 1143 0018 7047     		bx	lr
- 1144              	.L79:
- 1145 001a 00BF     		.align	2
- 1146              	.L78:
- 1147 001c 002004E0 		.word	-536600576
- 1148              		.cfi_endproc
- 1149              	.LFE241:
- 1151              		.section	.text.HAL_EnableCompensationCell,"ax",%progbits
- 1152              		.align	1
- 1153              		.global	HAL_EnableCompensationCell
- 1154              		.syntax unified
- 1155              		.thumb
- 1156              		.thumb_func
- 1158              	HAL_EnableCompensationCell:
- 1159              	.LFB242:
+ 1135              		.loc 1 517 1
+ 1136 0010 00BF     		nop
+ 1137 0012 BD46     		mov	sp, r7
+ 1138              	.LCFI85:
+ 1139              		.cfi_def_cfa_register 13
+ 1140              		@ sp needed
+ 1141 0014 5DF8047B 		ldr	r7, [sp], #4
+ 1142              	.LCFI86:
+ 1143              		.cfi_restore 7
+ 1144              		.cfi_def_cfa_offset 0
+ 1145 0018 7047     		bx	lr
+ 1146              	.L79:
+ 1147 001a 00BF     		.align	2
+ 1148              	.L78:
+ 1149 001c 002004E0 		.word	-536600576
+ 1150              		.cfi_endproc
+ 1151              	.LFE241:
+ 1153              		.section	.text.HAL_EnableCompensationCell,"ax",%progbits
+ 1154              		.align	1
+ 1155              		.global	HAL_EnableCompensationCell
+ 1156              		.syntax unified
+ 1157              		.thumb
+ 1158              		.thumb_func
+ 1160              	HAL_EnableCompensationCell:
+ 1161              	.LFB242:
  518:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  519:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  520:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Enables the I/O Compensation Cell.
@@ -1720,53 +1722,53 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  524:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  525:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_EnableCompensationCell(void)
  526:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1160              		.loc 1 526 1
- 1161              		.cfi_startproc
- 1162              		@ args = 0, pretend = 0, frame = 0
- 1163              		@ frame_needed = 1, uses_anonymous_args = 0
- 1164              		@ link register save eliminated.
- 1165 0000 80B4     		push	{r7}
- 1166              	.LCFI87:
- 1167              		.cfi_def_cfa_offset 4
- 1168              		.cfi_offset 7, -4
- 1169 0002 00AF     		add	r7, sp, #0
- 1170              	.LCFI88:
- 1171              		.cfi_def_cfa_register 7
+ 1162              		.loc 1 526 1
+ 1163              		.cfi_startproc
+ 1164              		@ args = 0, pretend = 0, frame = 0
+ 1165              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1166              		@ link register save eliminated.
+ 1167 0000 80B4     		push	{r7}
+ 1168              	.LCFI87:
+ 1169              		.cfi_def_cfa_offset 4
+ 1170              		.cfi_offset 7, -4
+ 1171 0002 00AF     		add	r7, sp, #0
+ 1172              	.LCFI88:
+ 1173              		.cfi_def_cfa_register 7
  527:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   *(__IO uint32_t *)CMPCR_CMP_PD_BB = (uint32_t)ENABLE;
- 1172              		.loc 1 527 3
- 1173 0004 034B     		ldr	r3, .L81
- 1174              		.loc 1 527 37
- 1175 0006 0122     		movs	r2, #1
- 1176 0008 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 30
+ 1174              		.loc 1 527 3
+ 1175 0004 034B     		ldr	r3, .L81
+ 1176              		.loc 1 527 37
+ARM GAS  /tmp/cce3NeiB.s 			page 30
 
 
+ 1177 0006 0122     		movs	r2, #1
+ 1178 0008 1A60     		str	r2, [r3]
  528:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1177              		.loc 1 528 1
- 1178 000a 00BF     		nop
- 1179 000c BD46     		mov	sp, r7
- 1180              	.LCFI89:
- 1181              		.cfi_def_cfa_register 13
- 1182              		@ sp needed
- 1183 000e 5DF8047B 		ldr	r7, [sp], #4
- 1184              	.LCFI90:
- 1185              		.cfi_restore 7
- 1186              		.cfi_def_cfa_offset 0
- 1187 0012 7047     		bx	lr
- 1188              	.L82:
- 1189              		.align	2
- 1190              	.L81:
- 1191 0014 00042742 		.word	1109853184
- 1192              		.cfi_endproc
- 1193              	.LFE242:
- 1195              		.section	.text.HAL_DisableCompensationCell,"ax",%progbits
- 1196              		.align	1
- 1197              		.global	HAL_DisableCompensationCell
- 1198              		.syntax unified
- 1199              		.thumb
- 1200              		.thumb_func
- 1202              	HAL_DisableCompensationCell:
- 1203              	.LFB243:
+ 1179              		.loc 1 528 1
+ 1180 000a 00BF     		nop
+ 1181 000c BD46     		mov	sp, r7
+ 1182              	.LCFI89:
+ 1183              		.cfi_def_cfa_register 13
+ 1184              		@ sp needed
+ 1185 000e 5DF8047B 		ldr	r7, [sp], #4
+ 1186              	.LCFI90:
+ 1187              		.cfi_restore 7
+ 1188              		.cfi_def_cfa_offset 0
+ 1189 0012 7047     		bx	lr
+ 1190              	.L82:
+ 1191              		.align	2
+ 1192              	.L81:
+ 1193 0014 00042742 		.word	1109853184
+ 1194              		.cfi_endproc
+ 1195              	.LFE242:
+ 1197              		.section	.text.HAL_DisableCompensationCell,"ax",%progbits
+ 1198              		.align	1
+ 1199              		.global	HAL_DisableCompensationCell
+ 1200              		.syntax unified
+ 1201              		.thumb
+ 1202              		.thumb_func
+ 1204              	HAL_DisableCompensationCell:
+ 1205              	.LFB243:
  529:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  530:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  531:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Power-down the I/O Compensation Cell.
@@ -1776,53 +1778,53 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  535:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  536:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** void HAL_DisableCompensationCell(void)
  537:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1204              		.loc 1 537 1
- 1205              		.cfi_startproc
- 1206              		@ args = 0, pretend = 0, frame = 0
- 1207              		@ frame_needed = 1, uses_anonymous_args = 0
- 1208              		@ link register save eliminated.
- 1209 0000 80B4     		push	{r7}
- 1210              	.LCFI91:
- 1211              		.cfi_def_cfa_offset 4
- 1212              		.cfi_offset 7, -4
- 1213 0002 00AF     		add	r7, sp, #0
- 1214              	.LCFI92:
- 1215              		.cfi_def_cfa_register 7
+ 1206              		.loc 1 537 1
+ 1207              		.cfi_startproc
+ 1208              		@ args = 0, pretend = 0, frame = 0
+ 1209              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1210              		@ link register save eliminated.
+ 1211 0000 80B4     		push	{r7}
+ 1212              	.LCFI91:
+ 1213              		.cfi_def_cfa_offset 4
+ 1214              		.cfi_offset 7, -4
+ 1215 0002 00AF     		add	r7, sp, #0
+ 1216              	.LCFI92:
+ 1217              		.cfi_def_cfa_register 7
  538:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   *(__IO uint32_t *)CMPCR_CMP_PD_BB = (uint32_t)DISABLE;
- 1216              		.loc 1 538 3
- 1217 0004 034B     		ldr	r3, .L84
- 1218              		.loc 1 538 37
- 1219 0006 0022     		movs	r2, #0
- 1220 0008 1A60     		str	r2, [r3]
+ 1218              		.loc 1 538 3
+ 1219 0004 034B     		ldr	r3, .L84
+ 1220              		.loc 1 538 37
+ 1221 0006 0022     		movs	r2, #0
+ 1222 0008 1A60     		str	r2, [r3]
  539:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1221              		.loc 1 539 1
- 1222 000a 00BF     		nop
- 1223 000c BD46     		mov	sp, r7
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 31
+ 1223              		.loc 1 539 1
+ARM GAS  /tmp/cce3NeiB.s 			page 31
 
 
- 1224              	.LCFI93:
- 1225              		.cfi_def_cfa_register 13
- 1226              		@ sp needed
- 1227 000e 5DF8047B 		ldr	r7, [sp], #4
- 1228              	.LCFI94:
- 1229              		.cfi_restore 7
- 1230              		.cfi_def_cfa_offset 0
- 1231 0012 7047     		bx	lr
- 1232              	.L85:
- 1233              		.align	2
- 1234              	.L84:
- 1235 0014 00042742 		.word	1109853184
- 1236              		.cfi_endproc
- 1237              	.LFE243:
- 1239              		.section	.text.HAL_GetUIDw0,"ax",%progbits
- 1240              		.align	1
- 1241              		.global	HAL_GetUIDw0
- 1242              		.syntax unified
- 1243              		.thumb
- 1244              		.thumb_func
- 1246              	HAL_GetUIDw0:
- 1247              	.LFB244:
+ 1224 000a 00BF     		nop
+ 1225 000c BD46     		mov	sp, r7
+ 1226              	.LCFI93:
+ 1227              		.cfi_def_cfa_register 13
+ 1228              		@ sp needed
+ 1229 000e 5DF8047B 		ldr	r7, [sp], #4
+ 1230              	.LCFI94:
+ 1231              		.cfi_restore 7
+ 1232              		.cfi_def_cfa_offset 0
+ 1233 0012 7047     		bx	lr
+ 1234              	.L85:
+ 1235              		.align	2
+ 1236              	.L84:
+ 1237 0014 00042742 		.word	1109853184
+ 1238              		.cfi_endproc
+ 1239              	.LFE243:
+ 1241              		.section	.text.HAL_GetUIDw0,"ax",%progbits
+ 1242              		.align	1
+ 1243              		.global	HAL_GetUIDw0
+ 1244              		.syntax unified
+ 1245              		.thumb
+ 1246              		.thumb_func
+ 1248              	HAL_GetUIDw0:
+ 1249              	.LFB244:
  540:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  541:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  542:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns first word of the unique device identifier (UID based on 96 bits)
@@ -1830,51 +1832,51 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  544:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  545:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetUIDw0(void)
  546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1248              		.loc 1 546 1
- 1249              		.cfi_startproc
- 1250              		@ args = 0, pretend = 0, frame = 0
- 1251              		@ frame_needed = 1, uses_anonymous_args = 0
- 1252              		@ link register save eliminated.
- 1253 0000 80B4     		push	{r7}
- 1254              	.LCFI95:
- 1255              		.cfi_def_cfa_offset 4
- 1256              		.cfi_offset 7, -4
- 1257 0002 00AF     		add	r7, sp, #0
- 1258              	.LCFI96:
- 1259              		.cfi_def_cfa_register 7
+ 1250              		.loc 1 546 1
+ 1251              		.cfi_startproc
+ 1252              		@ args = 0, pretend = 0, frame = 0
+ 1253              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1254              		@ link register save eliminated.
+ 1255 0000 80B4     		push	{r7}
+ 1256              	.LCFI95:
+ 1257              		.cfi_def_cfa_offset 4
+ 1258              		.cfi_offset 7, -4
+ 1259 0002 00AF     		add	r7, sp, #0
+ 1260              	.LCFI96:
+ 1261              		.cfi_def_cfa_register 7
  547:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return (READ_REG(*((uint32_t *)UID_BASE)));
- 1260              		.loc 1 547 11
- 1261 0004 034B     		ldr	r3, .L88
- 1262 0006 1B68     		ldr	r3, [r3]
+ 1262              		.loc 1 547 11
+ 1263 0004 034B     		ldr	r3, .L88
+ 1264 0006 1B68     		ldr	r3, [r3]
  548:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1263              		.loc 1 548 1
- 1264 0008 1846     		mov	r0, r3
- 1265 000a BD46     		mov	sp, r7
- 1266              	.LCFI97:
- 1267              		.cfi_def_cfa_register 13
- 1268              		@ sp needed
- 1269 000c 5DF8047B 		ldr	r7, [sp], #4
- 1270              	.LCFI98:
- 1271              		.cfi_restore 7
- 1272              		.cfi_def_cfa_offset 0
- 1273 0010 7047     		bx	lr
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 32
+ 1265              		.loc 1 548 1
+ 1266 0008 1846     		mov	r0, r3
+ 1267 000a BD46     		mov	sp, r7
+ 1268              	.LCFI97:
+ 1269              		.cfi_def_cfa_register 13
+ 1270              		@ sp needed
+ 1271 000c 5DF8047B 		ldr	r7, [sp], #4
+ 1272              	.LCFI98:
+ 1273              		.cfi_restore 7
+ARM GAS  /tmp/cce3NeiB.s 			page 32
 
 
- 1274              	.L89:
- 1275 0012 00BF     		.align	2
- 1276              	.L88:
- 1277 0014 107AFF1F 		.word	536836624
- 1278              		.cfi_endproc
- 1279              	.LFE244:
- 1281              		.section	.text.HAL_GetUIDw1,"ax",%progbits
- 1282              		.align	1
- 1283              		.global	HAL_GetUIDw1
- 1284              		.syntax unified
- 1285              		.thumb
- 1286              		.thumb_func
- 1288              	HAL_GetUIDw1:
- 1289              	.LFB245:
+ 1274              		.cfi_def_cfa_offset 0
+ 1275 0010 7047     		bx	lr
+ 1276              	.L89:
+ 1277 0012 00BF     		.align	2
+ 1278              	.L88:
+ 1279 0014 107AFF1F 		.word	536836624
+ 1280              		.cfi_endproc
+ 1281              	.LFE244:
+ 1283              		.section	.text.HAL_GetUIDw1,"ax",%progbits
+ 1284              		.align	1
+ 1285              		.global	HAL_GetUIDw1
+ 1286              		.syntax unified
+ 1287              		.thumb
+ 1288              		.thumb_func
+ 1290              	HAL_GetUIDw1:
+ 1291              	.LFB245:
  549:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  550:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  551:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns second word of the unique device identifier (UID based on 96 bits)
@@ -1882,51 +1884,51 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  553:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  554:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetUIDw1(void)
  555:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1290              		.loc 1 555 1
- 1291              		.cfi_startproc
- 1292              		@ args = 0, pretend = 0, frame = 0
- 1293              		@ frame_needed = 1, uses_anonymous_args = 0
- 1294              		@ link register save eliminated.
- 1295 0000 80B4     		push	{r7}
- 1296              	.LCFI99:
- 1297              		.cfi_def_cfa_offset 4
- 1298              		.cfi_offset 7, -4
- 1299 0002 00AF     		add	r7, sp, #0
- 1300              	.LCFI100:
- 1301              		.cfi_def_cfa_register 7
+ 1292              		.loc 1 555 1
+ 1293              		.cfi_startproc
+ 1294              		@ args = 0, pretend = 0, frame = 0
+ 1295              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1296              		@ link register save eliminated.
+ 1297 0000 80B4     		push	{r7}
+ 1298              	.LCFI99:
+ 1299              		.cfi_def_cfa_offset 4
+ 1300              		.cfi_offset 7, -4
+ 1301 0002 00AF     		add	r7, sp, #0
+ 1302              	.LCFI100:
+ 1303              		.cfi_def_cfa_register 7
  556:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return (READ_REG(*((uint32_t *)(UID_BASE + 4U))));
- 1302              		.loc 1 556 11
- 1303 0004 034B     		ldr	r3, .L92
- 1304 0006 1B68     		ldr	r3, [r3]
+ 1304              		.loc 1 556 11
+ 1305 0004 034B     		ldr	r3, .L92
+ 1306 0006 1B68     		ldr	r3, [r3]
  557:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1305              		.loc 1 557 1
- 1306 0008 1846     		mov	r0, r3
- 1307 000a BD46     		mov	sp, r7
- 1308              	.LCFI101:
- 1309              		.cfi_def_cfa_register 13
- 1310              		@ sp needed
- 1311 000c 5DF8047B 		ldr	r7, [sp], #4
- 1312              	.LCFI102:
- 1313              		.cfi_restore 7
- 1314              		.cfi_def_cfa_offset 0
- 1315 0010 7047     		bx	lr
- 1316              	.L93:
- 1317 0012 00BF     		.align	2
- 1318              	.L92:
- 1319 0014 147AFF1F 		.word	536836628
- 1320              		.cfi_endproc
- 1321              	.LFE245:
- 1323              		.section	.text.HAL_GetUIDw2,"ax",%progbits
- 1324              		.align	1
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 33
+ 1307              		.loc 1 557 1
+ 1308 0008 1846     		mov	r0, r3
+ 1309 000a BD46     		mov	sp, r7
+ 1310              	.LCFI101:
+ 1311              		.cfi_def_cfa_register 13
+ 1312              		@ sp needed
+ 1313 000c 5DF8047B 		ldr	r7, [sp], #4
+ 1314              	.LCFI102:
+ 1315              		.cfi_restore 7
+ 1316              		.cfi_def_cfa_offset 0
+ 1317 0010 7047     		bx	lr
+ 1318              	.L93:
+ 1319 0012 00BF     		.align	2
+ 1320              	.L92:
+ 1321 0014 147AFF1F 		.word	536836628
+ 1322              		.cfi_endproc
+ 1323              	.LFE245:
+ARM GAS  /tmp/cce3NeiB.s 			page 33
 
 
- 1325              		.global	HAL_GetUIDw2
- 1326              		.syntax unified
- 1327              		.thumb
- 1328              		.thumb_func
- 1330              	HAL_GetUIDw2:
- 1331              	.LFB246:
+ 1325              		.section	.text.HAL_GetUIDw2,"ax",%progbits
+ 1326              		.align	1
+ 1327              		.global	HAL_GetUIDw2
+ 1328              		.syntax unified
+ 1329              		.thumb
+ 1330              		.thumb_func
+ 1332              	HAL_GetUIDw2:
+ 1333              	.LFB246:
  558:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** 
  559:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** /**
  560:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   * @brief  Returns third word of the unique device identifier (UID based on 96 bits)
@@ -1934,146 +1936,145 @@ ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 1
  562:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   */
  563:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** uint32_t HAL_GetUIDw2(void)
  564:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** {
- 1332              		.loc 1 564 1
- 1333              		.cfi_startproc
- 1334              		@ args = 0, pretend = 0, frame = 0
- 1335              		@ frame_needed = 1, uses_anonymous_args = 0
- 1336              		@ link register save eliminated.
- 1337 0000 80B4     		push	{r7}
- 1338              	.LCFI103:
- 1339              		.cfi_def_cfa_offset 4
- 1340              		.cfi_offset 7, -4
- 1341 0002 00AF     		add	r7, sp, #0
- 1342              	.LCFI104:
- 1343              		.cfi_def_cfa_register 7
+ 1334              		.loc 1 564 1
+ 1335              		.cfi_startproc
+ 1336              		@ args = 0, pretend = 0, frame = 0
+ 1337              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1338              		@ link register save eliminated.
+ 1339 0000 80B4     		push	{r7}
+ 1340              	.LCFI103:
+ 1341              		.cfi_def_cfa_offset 4
+ 1342              		.cfi_offset 7, -4
+ 1343 0002 00AF     		add	r7, sp, #0
+ 1344              	.LCFI104:
+ 1345              		.cfi_def_cfa_register 7
  565:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c ****   return (READ_REG(*((uint32_t *)(UID_BASE + 8U))));
- 1344              		.loc 1 565 11
- 1345 0004 034B     		ldr	r3, .L96
- 1346 0006 1B68     		ldr	r3, [r3]
+ 1346              		.loc 1 565 11
+ 1347 0004 034B     		ldr	r3, .L96
+ 1348 0006 1B68     		ldr	r3, [r3]
  566:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c **** }
- 1347              		.loc 1 566 1
- 1348 0008 1846     		mov	r0, r3
- 1349 000a BD46     		mov	sp, r7
- 1350              	.LCFI105:
- 1351              		.cfi_def_cfa_register 13
- 1352              		@ sp needed
- 1353 000c 5DF8047B 		ldr	r7, [sp], #4
- 1354              	.LCFI106:
- 1355              		.cfi_restore 7
- 1356              		.cfi_def_cfa_offset 0
- 1357 0010 7047     		bx	lr
- 1358              	.L97:
- 1359 0012 00BF     		.align	2
- 1360              	.L96:
- 1361 0014 187AFF1F 		.word	536836632
- 1362              		.cfi_endproc
- 1363              	.LFE246:
- 1365              		.text
- 1366              	.Letext0:
- 1367              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 1368              		.file 3 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 1369              		.file 4 "c:\\arm-gcc\\tools\\arm-gnu-toolchain-11.3.rel1-mingw-w64-i686-arm-none-eabi\\arm-none-ea
- 1370              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
- 1371              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 1372              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 1373              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 1374              		.file 9 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 34
+ 1349              		.loc 1 566 1
+ 1350 0008 1846     		mov	r0, r3
+ 1351 000a BD46     		mov	sp, r7
+ 1352              	.LCFI105:
+ 1353              		.cfi_def_cfa_register 13
+ 1354              		@ sp needed
+ 1355 000c 5DF8047B 		ldr	r7, [sp], #4
+ 1356              	.LCFI106:
+ 1357              		.cfi_restore 7
+ 1358              		.cfi_def_cfa_offset 0
+ 1359 0010 7047     		bx	lr
+ 1360              	.L97:
+ 1361 0012 00BF     		.align	2
+ 1362              	.L96:
+ 1363 0014 187AFF1F 		.word	536836632
+ 1364              		.cfi_endproc
+ 1365              	.LFE246:
+ 1367              		.text
+ 1368              	.Letext0:
+ 1369              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 1370              		.file 3 "/usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h"
+ 1371              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 1372              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 1373              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 1374              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /tmp/cce3NeiB.s 			page 34
 
 
- 1375              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 35
+ 1375              		.file 8 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 1376              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ARM GAS  /tmp/cce3NeiB.s 			page 35
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f4xx_hal.c
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:24     .bss.uwTick:00000000 uwTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:21     .bss.uwTick:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:31     .data.uwTickPrio:00000000 uwTickPrio
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:28     .data.uwTickPrio:00000000 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:37     .data.uwTickFreq:00000000 uwTickFreq
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:40     .text.HAL_Init:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:46     .text.HAL_Init:00000000 HAL_Init
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:254    .text.HAL_InitTick:00000000 HAL_InitTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:184    .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:95     .text.HAL_Init:00000040 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:100    .text.HAL_DeInit:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:106    .text.HAL_DeInit:00000000 HAL_DeInit
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:219    .text.HAL_MspDeInit:00000000 HAL_MspDeInit
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:170    .text.HAL_DeInit:0000004c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:178    .text.HAL_MspInit:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:213    .text.HAL_MspDeInit:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:248    .text.HAL_InitTick:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:326    .text.HAL_InitTick:00000054 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:333    .text.HAL_IncTick:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:339    .text.HAL_IncTick:00000000 HAL_IncTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:376    .text.HAL_IncTick:00000020 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:382    .text.HAL_GetTick:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:388    .text.HAL_GetTick:00000000 HAL_GetTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:419    .text.HAL_GetTick:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:424    .text.HAL_GetTickPrio:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:430    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:461    .text.HAL_GetTickPrio:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:466    .text.HAL_SetTickFreq:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:472    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:540    .text.HAL_SetTickFreq:00000048 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:546    .text.HAL_GetTickFreq:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:552    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:583    .text.HAL_GetTickFreq:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:588    .text.HAL_Delay:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:594    .text.HAL_Delay:00000000 HAL_Delay
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:658    .text.HAL_Delay:00000044 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:663    .text.HAL_SuspendTick:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:669    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:703    .text.HAL_SuspendTick:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:708    .text.HAL_ResumeTick:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:714    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:748    .text.HAL_ResumeTick:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:753    .text.HAL_GetHalVersion:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:759    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:789    .text.HAL_GetHalVersion:00000010 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:794    .text.HAL_GetREVID:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:800    .text.HAL_GetREVID:00000000 HAL_GetREVID
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:833    .text.HAL_GetREVID:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:838    .text.HAL_GetDEVID:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:844    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:877    .text.HAL_GetDEVID:00000018 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:882    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:888    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:922    .text.HAL_DBGMCU_EnableDBGSleepMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:927    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
-ARM GAS  C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s 			page 36
+     /tmp/cce3NeiB.s:25     .bss.uwTick:00000000 uwTick
+     /tmp/cce3NeiB.s:22     .bss.uwTick:00000000 $d
+     /tmp/cce3NeiB.s:32     .data.uwTickPrio:00000000 uwTickPrio
+     /tmp/cce3NeiB.s:29     .data.uwTickPrio:00000000 $d
+     /tmp/cce3NeiB.s:38     .data.uwTickFreq:00000000 uwTickFreq
+     /tmp/cce3NeiB.s:41     .text.HAL_Init:00000000 $t
+     /tmp/cce3NeiB.s:47     .text.HAL_Init:00000000 HAL_Init
+     /tmp/cce3NeiB.s:254    .text.HAL_InitTick:00000000 HAL_InitTick
+     /tmp/cce3NeiB.s:184    .text.HAL_MspInit:00000000 HAL_MspInit
+     /tmp/cce3NeiB.s:95     .text.HAL_Init:00000040 $d
+     /tmp/cce3NeiB.s:100    .text.HAL_DeInit:00000000 $t
+     /tmp/cce3NeiB.s:106    .text.HAL_DeInit:00000000 HAL_DeInit
+     /tmp/cce3NeiB.s:219    .text.HAL_MspDeInit:00000000 HAL_MspDeInit
+     /tmp/cce3NeiB.s:170    .text.HAL_DeInit:0000004c $d
+     /tmp/cce3NeiB.s:178    .text.HAL_MspInit:00000000 $t
+     /tmp/cce3NeiB.s:213    .text.HAL_MspDeInit:00000000 $t
+     /tmp/cce3NeiB.s:248    .text.HAL_InitTick:00000000 $t
+     /tmp/cce3NeiB.s:326    .text.HAL_InitTick:00000054 $d
+     /tmp/cce3NeiB.s:333    .text.HAL_IncTick:00000000 $t
+     /tmp/cce3NeiB.s:339    .text.HAL_IncTick:00000000 HAL_IncTick
+     /tmp/cce3NeiB.s:376    .text.HAL_IncTick:00000020 $d
+     /tmp/cce3NeiB.s:382    .text.HAL_GetTick:00000000 $t
+     /tmp/cce3NeiB.s:388    .text.HAL_GetTick:00000000 HAL_GetTick
+     /tmp/cce3NeiB.s:419    .text.HAL_GetTick:00000014 $d
+     /tmp/cce3NeiB.s:424    .text.HAL_GetTickPrio:00000000 $t
+     /tmp/cce3NeiB.s:430    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
+     /tmp/cce3NeiB.s:461    .text.HAL_GetTickPrio:00000014 $d
+     /tmp/cce3NeiB.s:466    .text.HAL_SetTickFreq:00000000 $t
+     /tmp/cce3NeiB.s:472    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
+     /tmp/cce3NeiB.s:540    .text.HAL_SetTickFreq:00000048 $d
+     /tmp/cce3NeiB.s:546    .text.HAL_GetTickFreq:00000000 $t
+     /tmp/cce3NeiB.s:552    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
+     /tmp/cce3NeiB.s:583    .text.HAL_GetTickFreq:00000014 $d
+     /tmp/cce3NeiB.s:588    .text.HAL_Delay:00000000 $t
+     /tmp/cce3NeiB.s:594    .text.HAL_Delay:00000000 HAL_Delay
+     /tmp/cce3NeiB.s:658    .text.HAL_Delay:00000044 $d
+     /tmp/cce3NeiB.s:663    .text.HAL_SuspendTick:00000000 $t
+     /tmp/cce3NeiB.s:669    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
+     /tmp/cce3NeiB.s:704    .text.HAL_SuspendTick:0000001c $d
+     /tmp/cce3NeiB.s:709    .text.HAL_ResumeTick:00000000 $t
+     /tmp/cce3NeiB.s:715    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
+     /tmp/cce3NeiB.s:750    .text.HAL_ResumeTick:0000001c $d
+     /tmp/cce3NeiB.s:755    .text.HAL_GetHalVersion:00000000 $t
+     /tmp/cce3NeiB.s:761    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
+     /tmp/cce3NeiB.s:791    .text.HAL_GetHalVersion:00000010 $d
+     /tmp/cce3NeiB.s:796    .text.HAL_GetREVID:00000000 $t
+     /tmp/cce3NeiB.s:802    .text.HAL_GetREVID:00000000 HAL_GetREVID
+     /tmp/cce3NeiB.s:835    .text.HAL_GetREVID:00000014 $d
+     /tmp/cce3NeiB.s:840    .text.HAL_GetDEVID:00000000 $t
+     /tmp/cce3NeiB.s:846    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
+     /tmp/cce3NeiB.s:879    .text.HAL_GetDEVID:00000018 $d
+     /tmp/cce3NeiB.s:884    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
+     /tmp/cce3NeiB.s:890    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
+     /tmp/cce3NeiB.s:924    .text.HAL_DBGMCU_EnableDBGSleepMode:0000001c $d
+     /tmp/cce3NeiB.s:929    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
+ARM GAS  /tmp/cce3NeiB.s 			page 36
 
 
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:933    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:967    .text.HAL_DBGMCU_DisableDBGSleepMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:972    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:978    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1012   .text.HAL_DBGMCU_EnableDBGStopMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1017   .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1023   .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1057   .text.HAL_DBGMCU_DisableDBGStopMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1062   .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1068   .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1102   .text.HAL_DBGMCU_EnableDBGStandbyMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1107   .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1113   .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1147   .text.HAL_DBGMCU_DisableDBGStandbyMode:0000001c $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1152   .text.HAL_EnableCompensationCell:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1158   .text.HAL_EnableCompensationCell:00000000 HAL_EnableCompensationCell
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1191   .text.HAL_EnableCompensationCell:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1196   .text.HAL_DisableCompensationCell:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1202   .text.HAL_DisableCompensationCell:00000000 HAL_DisableCompensationCell
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1235   .text.HAL_DisableCompensationCell:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1240   .text.HAL_GetUIDw0:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1246   .text.HAL_GetUIDw0:00000000 HAL_GetUIDw0
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1277   .text.HAL_GetUIDw0:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1282   .text.HAL_GetUIDw1:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1288   .text.HAL_GetUIDw1:00000000 HAL_GetUIDw1
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1319   .text.HAL_GetUIDw1:00000014 $d
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1324   .text.HAL_GetUIDw2:00000000 $t
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1330   .text.HAL_GetUIDw2:00000000 HAL_GetUIDw2
-C:\Users\bruno\AppData\Local\Temp\ccZBKGnd.s:1361   .text.HAL_GetUIDw2:00000014 $d
+     /tmp/cce3NeiB.s:935    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
+     /tmp/cce3NeiB.s:969    .text.HAL_DBGMCU_DisableDBGSleepMode:0000001c $d
+     /tmp/cce3NeiB.s:974    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
+     /tmp/cce3NeiB.s:980    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
+     /tmp/cce3NeiB.s:1014   .text.HAL_DBGMCU_EnableDBGStopMode:0000001c $d
+     /tmp/cce3NeiB.s:1019   .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
+     /tmp/cce3NeiB.s:1025   .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
+     /tmp/cce3NeiB.s:1059   .text.HAL_DBGMCU_DisableDBGStopMode:0000001c $d
+     /tmp/cce3NeiB.s:1064   .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
+     /tmp/cce3NeiB.s:1070   .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
+     /tmp/cce3NeiB.s:1104   .text.HAL_DBGMCU_EnableDBGStandbyMode:0000001c $d
+     /tmp/cce3NeiB.s:1109   .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
+     /tmp/cce3NeiB.s:1115   .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
+     /tmp/cce3NeiB.s:1149   .text.HAL_DBGMCU_DisableDBGStandbyMode:0000001c $d
+     /tmp/cce3NeiB.s:1154   .text.HAL_EnableCompensationCell:00000000 $t
+     /tmp/cce3NeiB.s:1160   .text.HAL_EnableCompensationCell:00000000 HAL_EnableCompensationCell
+     /tmp/cce3NeiB.s:1193   .text.HAL_EnableCompensationCell:00000014 $d
+     /tmp/cce3NeiB.s:1198   .text.HAL_DisableCompensationCell:00000000 $t
+     /tmp/cce3NeiB.s:1204   .text.HAL_DisableCompensationCell:00000000 HAL_DisableCompensationCell
+     /tmp/cce3NeiB.s:1237   .text.HAL_DisableCompensationCell:00000014 $d
+     /tmp/cce3NeiB.s:1242   .text.HAL_GetUIDw0:00000000 $t
+     /tmp/cce3NeiB.s:1248   .text.HAL_GetUIDw0:00000000 HAL_GetUIDw0
+     /tmp/cce3NeiB.s:1279   .text.HAL_GetUIDw0:00000014 $d
+     /tmp/cce3NeiB.s:1284   .text.HAL_GetUIDw1:00000000 $t
+     /tmp/cce3NeiB.s:1290   .text.HAL_GetUIDw1:00000000 HAL_GetUIDw1
+     /tmp/cce3NeiB.s:1321   .text.HAL_GetUIDw1:00000014 $d
+     /tmp/cce3NeiB.s:1326   .text.HAL_GetUIDw2:00000000 $t
+     /tmp/cce3NeiB.s:1332   .text.HAL_GetUIDw2:00000000 HAL_GetUIDw2
+     /tmp/cce3NeiB.s:1363   .text.HAL_GetUIDw2:00000014 $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriorityGrouping
